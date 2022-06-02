@@ -1,0 +1,31 @@
+{
+    "description": "A fast, clean, responsive Hugo theme.",
+    "features": 
+    [
+        "blog",
+        "responsive",
+        "multilingual",
+        "minified-assets",
+        "theme-toggle"
+    ],
+    "homepage": "http://example.com/",
+    "license": "MIT",
+    "licenselink": "https://github.com/vasilecampeanu/magnum-opus/blob/main/LICENSE",
+    "min_version": "0.41.0",
+    "name": "magnum-opus",
+    "tags": 
+    [
+        "blog",
+        "clean",
+        "dark",
+        "responsive",
+        "light",
+        "minimalist",
+        "simple"
+    ],
+    "author": 
+    {
+        "homepage": "https://github.com/vasilecampeanu",
+        "name": "Vasile Campeanu"
+    }
+}
