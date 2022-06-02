@@ -11,6 +11,19 @@
 {{ $styles := resources.Get "styles/styles.scss" | resources.ExecuteAsTemplate "styles.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" {{ template "integrity" $styles }}>
 
+{{/*  Scripts  */}}
+{{/*  Temporary include JS here  */}}
+{{/*  External libraries  */}}
+{{/*  JQwery  */}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{{/*  Lottie player  */}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.5.7/lottie-player.js" integrity="sha512-wUgyNk7aI5qo1G294znyaFsJi8JbXTyTn7QEViCh+f021/yo6aKHPw3GX19txyhfiLQIB/duQcSKADt1GqE+KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{{/*  Main js script  */}}
+{{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $index.RelPermalink }}" {{ template "integrity" $index }}></script>
+
 {{/*  Integrity  */}}
 {{ define "integrity" }}
     {{ if (urls.Parse .Permalink).Host }}
