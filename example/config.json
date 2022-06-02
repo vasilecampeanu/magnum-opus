@@ -1,0 +1,6 @@
+{
+    "baseURL": "http://example.org/",
+    "languageCode": "en-us",
+    "title": "Magnum Opus",
+    "theme": "magnum-opus"
+}
