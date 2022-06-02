@@ -1,2 +1,8 @@
+# Folders
+node_modules
+public
+resources
+
+# Hidden files
 .DS_Store
 .hugo_build.lock
