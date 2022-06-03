@@ -21,6 +21,10 @@
 {{/*  Lottie player  */}}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
 
+{{/*  TweenMax script  */}}
+{{ $TweenMax := resources.Get "js/TweenMax.min.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $TweenMax.RelPermalink }}" {{ template "integrity" $TweenMax }}></script>
+
 {{/*  Main js script  */}}
 {{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $index.RelPermalink }}" {{ template "integrity" $index }}></script>
