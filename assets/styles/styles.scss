@@ -1,37 +1,8 @@
-// Load fonts
+// Include custom fonts
 @import "./core/fonts.scss";
 
-// Tests
-body
-{
-    background-color: orange;
-    font-family: 'Wotfard' !important;
-    padding: 0px;
-    margin: 0px;
-}
+// Load fonts
+@import "./core/variables.scss";
 
-body 
-{
-    min-height: 100vh;
-    min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height: fill-available;
-}
-
-html 
-{
-    height: fill-available;
-    height: -webkit-fill-available;
-}
-
-.navbar.mobile
-{
-    min-height: 100vh;
-    min-height: fill-available;
-
-    width: 100vw;
-    background-color: red;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+// General styles
+@import "./core/general.scss";

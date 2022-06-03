@@ -1,0 +1,39 @@
+// Theme variables
+// Light theme variables
+:root
+{
+    --background-primary: #0E141B;
+}
+
+// Dark theme variables
+[saved-theme="light"]
+{
+    --background-primary: #ffffff;
+}
+
+// Transitions
+:root
+{
+    --hover-transition: 0.25s;
+}
+
+// Typography
+:root
+{
+    // Default font
+    --default-font: "Wotfard";
+
+    // Font sizes
+    --font-size-xxsm: 14px;
+    --font-size-xsm: 16px;
+    --font-size-sm: 18px;
+    --font-size-m: 20px;
+    --font-size-lg: 24px;
+    --font-size-xlg: 28px;
+    --font-size-xxlg: 32px;
+}
+
+// Shadow layouts
+:root
+{
+}
