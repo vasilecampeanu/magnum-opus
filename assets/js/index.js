@@ -1,13 +1,10 @@
+// On page load
 function pageLoad() {
     console.log("Hello world!");
 }
 
-$(document).ready(function () {
-    // Preload
-    pageLoad();
-
-    // Afterload code here ...
-    // Blob animation
+// Blob animation
+function blobBackgroundAnimation() {
     var tl = new TimelineMax({
         yoyo: true,
         repeat: -1,
@@ -34,4 +31,49 @@ $(document).ready(function () {
             d: "M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z",
         },
     });
+}
+
+// Theme
+function ThemeSwitcher(params) {
+    const defaultTheme = 'dark';
+    const currentTheme = localStorage.getItem('theme') ?? defaultTheme;
+
+    if (currentTheme)
+    {
+        document.documentElement.setAttribute('saved-theme', currentTheme);
+    }
+
+    $(document).keydown(function(event) {
+        if (event.ctrlKey && (event.which === 66)) 
+        {
+            console.log(event.which);
+            console.log(String.fromCharCode(event.which));
+    
+            // Switch theme
+            document.documentElement.setAttribute('saved-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    
+        if (event.ctrlKey && (event.which === 76)) 
+        {
+            console.log(event.which);
+            console.log(String.fromCharCode(event.which));
+    
+            // Switch theme
+            document.documentElement.setAttribute('saved-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
+
+$(document).ready(function () {
+    // Preload
+    pageLoad();
+
+    // Afterload code here ...
+    // Enable blob background animation
+    blobBackgroundAnimation();
+
+    // Theme
+    ThemeSwitcher();
 });
