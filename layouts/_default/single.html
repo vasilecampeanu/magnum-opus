@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <div class="main-wrapper article">
+        <article>
+            <header></header>
+            <section class="article-content">
+                {{ if .Content }}
+                    {{ .Content }}
+                {{ end }}
+            </section>
+            <footer></footer>
+        </article>
+    </div>
+{{ end }}

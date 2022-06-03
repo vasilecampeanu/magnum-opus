@@ -3,4 +3,20 @@
 {{ end }}
 
 {{ define "main" }}
+    <h1>Hello world!</h1>
+    <div class="testing">
+        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.posts }}
+        {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+        {{ $filtered := ($pages | intersect $notHidden) }}
+        
+        <div class="articles">
+            <div class="post-list">
+                {{ range $index, $element := $filtered }}
+                    <a href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
 {{ end }}
