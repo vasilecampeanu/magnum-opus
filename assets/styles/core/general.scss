@@ -1,5 +1,6 @@
 body
 {
+    // General body styles
     background-color: var(--background-primary);
     font-family: var(--default-font);
     
@@ -10,4 +11,28 @@ body
 html
 {
     scroll-behavior: smooth;
+}
+
+.site-wrapper
+{
+    // Base grid layout
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0rem;
+
+    // Width
+    width: 85%;
+    max-width: 1536px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    
+    // Loading & resize transitions
+    // transition: opacity 0.5s ease-out, width .3s, transform .3s;
+    // opacity: 0;
+    // display: none;
+
+    @media screen and (max-width: 1220px)
+    {
+        width: 100%;
+    }
 }

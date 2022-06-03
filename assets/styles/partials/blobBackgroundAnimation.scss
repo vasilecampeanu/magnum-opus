@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    width: 62.5%;
+    width: 60%;
 }
 
 .background-svg svg
@@ -17,8 +17,19 @@
 {
     position: absolute;
     z-index: -1;
-    height: 440px;
     width: 440px;
+    height: 440px;
+
+    @media screen and (max-width: 1024px)
+    {
+        width: 360px;
+        height: 360px;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        display: none;
+    }
 }
 
 [saved-theme="dark"] 
