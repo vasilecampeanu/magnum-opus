@@ -1,6 +1,6 @@
 // On page load
 function pageLoad() {
-    console.log("Hello world!");
+    // CCode here
 }
 
 // Blob animation

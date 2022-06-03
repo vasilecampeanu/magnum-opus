@@ -20,3 +20,29 @@
     height: 440px;
     width: 440px;
 }
+
+[saved-theme="dark"] 
+{
+    // Blob svg gradient 
+    --stop-color: #2D3339;
+
+    .background-svg
+    {
+        opacity: 0.75;
+    }
+
+    .background-svg svg path
+    {
+        fill: #141A21; // fill: #10161D;
+    }
+}
+
+[saved-theme="light"] 
+{
+    --stop-color: #ffffff;
+
+    .background-svg svg path
+    {
+        fill: #f1f6f9;
+    }
+}
