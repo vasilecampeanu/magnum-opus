@@ -1,0 +1,101 @@
+.navbar
+{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    height: 80px;
+
+    @media screen and (max-width: 768px)
+    {
+        height: 60px;
+    }
+
+    .logo
+    {
+        align-self: center;
+        
+        a
+        {
+            padding: 10px 0px;
+            text-decoration: none;
+            color: var(--text-normal);
+            font-size: var(--font-size-xlg);
+            font-weight: bold;
+            align-self: center;
+            
+            span
+            {
+                color: var(--text-accent);
+            }
+
+            @media screen and (max-width: 768px)
+            {
+                font-size: var(--font-size-lg);
+            }
+        }
+    }
+
+    .links
+    {
+        align-self: center;
+        justify-self: end;
+
+        ul
+        {
+            display: flex;
+
+            li
+            {
+                list-style: none;
+                display: inline-flex;
+                margin-left: 15px;
+
+                a
+                {
+                    display: inline-flex;
+                    align-self: center;
+                    font-weight: bold !important;
+                    text-decoration: none;
+                    color: var(--text-normal);
+                    font-size: var(--font-size-xsm);
+                    text-transform: uppercase;
+                    transition: all var(--hover-transition);
+
+                    svg
+                    {
+                        height: 1em;
+                        width: 1em;
+                        align-self: center;
+                        stroke-width: 3;
+
+                        &.mail-icon
+                        {
+                            height: 1.05em;
+                            width: 1.05em;
+                        }
+                    }
+
+                    p
+                    {
+                        margin-left: 5px;
+                    }
+
+                    &.active
+                    {
+                        color: var(--text-accent);
+                    }
+
+                    &:hover
+                    {
+                        color: var(--text-accent-hover);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1024px)
+        {
+            display: none;
+        }
+    }
+}

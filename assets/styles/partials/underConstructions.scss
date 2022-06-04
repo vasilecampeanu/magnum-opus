@@ -1,0 +1,19 @@
+.underConstruction
+{
+    width: 100%;
+    height: calc(100vh - 80px - 60px);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    lottie-player
+    {
+        width:  400px !important;
+        height: 400px !important; 
+    }
+
+    h2
+    {
+        text-align: center;
+    }
+}

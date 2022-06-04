@@ -3,12 +3,18 @@
 :root
 {
     --background-primary: #0E141A;
+    --text-normal: #ffffff;
+    --text-accent: #4C6EF5;
+    --text-accent-hover: #F5D34C;
 }
 
 // Dark theme variables
 [saved-theme="light"]
 {
     --background-primary: #ffffff;
+    --text-normal: #000000;
+    --text-accent: #4C6EF5;
+    --text-accent-hover: #F5D34C;
 }
 
 // Transitions
