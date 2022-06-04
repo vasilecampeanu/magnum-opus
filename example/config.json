@@ -79,16 +79,14 @@
             "general":
             [
                 {
-                    "name": "GitHub",
-                    "weight": 1,
-                    "url": "https://github.com/vasilecampeanu/",
-                    "icon": "github"
-                },
-                {
                     "name": "Instagram",
-                    "weight": 2,
                     "url": "https://www.instagram.com/vasilecampeanu.link/",
                     "icon": "instagram"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/vasilecampeanu/",
+                    "icon": "github"
                 }
             ]
         }
