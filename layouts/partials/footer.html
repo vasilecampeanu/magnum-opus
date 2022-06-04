@@ -1,5 +1,12 @@
 <div class="page-footer">
     <div class="left">© 2022 Vasile Câmpeanu</div>
     <div class="right">
+        <ul>
+            {{ range .Site.Params.socialMedia.general }}
+                <li>
+                    <a href="{{ .url }}">{{ partial "helper/icon" .icon }}</a>
+                </li>
+            {{ end }}
+        </ul>
     </div>
 </div>
