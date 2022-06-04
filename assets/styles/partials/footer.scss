@@ -1,0 +1,18 @@
+.page-footer
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    height: 60px;
+
+    .left
+    {
+        align-self: center;
+        color: var(--text-normal);
+    }
+
+    .right
+    {
+        align-self: center;
+    }
+}

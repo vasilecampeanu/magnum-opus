@@ -19,9 +19,10 @@ html
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 0rem;
-
+    
     // Width
     width: 85%;
+    height: 100%;
     max-width: 1536px;
     padding: 0px 20px;
     margin: 0 auto;
