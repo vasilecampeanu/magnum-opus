@@ -66,6 +66,10 @@ function ThemeSwitcher(params) {
     });
 }
 
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
 function HideNavbar() {
     const body = document.body;
     let lastScroll = 0;
@@ -83,6 +87,10 @@ function HideNavbar() {
         {
             body.classList.remove("scroll-up");
             body.classList.add("scroll-down");
+            var language_dropdown = document.getElementById("dropdown-language-content");
+            if (hasClass(language_dropdown, 'show')) {
+                language_dropdown.classList.toggle("show");
+            }
         } 
         else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) 
         {
@@ -109,3 +117,26 @@ $(document).ready(function () {
     HideNavbar();
 });
 
+// Language switch
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) 
+    {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        
+        for (var i = 0; i < dropdowns.length; i++) 
+        {
+            var openDropdown = dropdowns[i];
+            
+            if (openDropdown.classList.contains('show')) 
+            {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function dropDownFunction() 
+{
+    document.getElementById("dropdown-language-content").classList.toggle("show");
+}

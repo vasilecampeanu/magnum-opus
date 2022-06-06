@@ -341,14 +341,45 @@ header
                             {
                                 display: none;
                                 position: absolute;
-                                overflow: auto;
+                                // overflow: auto;
                                 z-index: 1;
-                        
+
+                                padding: 5px;
+                                background-color: #13181F;
+                                // top: 5px;
+                                // left: 0;
+                                // width: 100%;
+                                border-radius: 4px;
+                                // display: block;
+                                box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
+                                z-index: 2;
+                                // opacity: 0;
+                                // pointer-events: none;
+                                // transform: translateY(20px);
+                                transition: all 200ms linear;
+                                margin-top: 15px;
+                                margin-left: -5px;
+                                
+                                ul
+                                {
+                                    display: block;
+                                    
+                                    li
+                                    {
+                                        padding: 0px;
+                                    }
+
+                                    li:last-child
+                                    {
+                                        margin-top: 5px;
+                                    }
+                                }
+
                                 a
                                 {
                                     font-weight: bold;
                                     display: flex;
-                                    margin-top: 7.5px;
+                                    // margin-top: 7.5px;
                                     color: var(--text-normal);
                                     
                                     transition: all var(--hover-transition);
@@ -357,7 +388,12 @@ header
                         
                                     text-transform: uppercase;
                                     text-decoration: none;
-                        
+                                    
+                                    svg
+                                    {
+                                        margin-right: 5px;
+                                    }
+
                                     &:hover
                                     {
                                         text-decoration: underline;
@@ -394,12 +430,48 @@ header
 	}
 }
 
-.menu-is-open 
-{
-	overflow: hidden;
+// .menu-is-open 
+// {
+// 	overflow: hidden;
 
-	.navbar
-    {
-		filter: none;
-	}
+// 	.navbar
+//     {
+// 		filter: none;
+// 	}
+// }
+
+// Helper
+.show 
+{
+    display: block !important;
+}
+
+.dropdown-content
+{
+    background: #FFFFFF;
+    border: 1px solid #252A31;
+}
+
+.dropdown-content:before, .dropdown-content:after 
+{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+}
+
+.dropdown-content:before 
+{
+    left: 7px;
+    border: 11px solid transparent;
+    border-bottom-color: #252A31;
+}
+
+.dropdown-content:after 
+{
+    left: 8px;
+    border: 10px solid transparent;
+    border-bottom-color: #13181F;
 }
