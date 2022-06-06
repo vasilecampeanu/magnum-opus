@@ -30,6 +30,21 @@
                         </label>
                     </div>
                 </li>
+                <li>
+                    <div class="dropdown-language">
+                        <button>
+                            {{ partial "helper/icon" "languages" }}
+                        </button>
+                        <div id="dropdown-language-content" class="dropdown-content">
+                            {{ $lang := .Lang}}
+                            {{ with $.Site.Home.AllTranslations }}
+                                {{ range . }}
+                                    <a href="{{ .Permalink }}">{{ partial "helper/icon" "languages" }}{{ .Lang | title }}</a>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                </li>
                 <li class="togle-navbar-mobile">
                     <div class="burger-menu">
                         <button id="burger" class="burger" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Mobile Menu">

@@ -20,8 +20,6 @@ header
         {
             display: grid;
             grid-template-columns: auto 1fr auto;
-            
-
 
             // Width
             width: 85%;
@@ -137,7 +135,7 @@ header
             {
                 align-self: center;
                 justify-self: end;
-                // padding-left: 00px;
+                // padding-left: 5px;
                 
                 ul
                 {
@@ -148,7 +146,7 @@ header
                         display: grid;
                         list-style: none;
                         cursor: pointer;
-                        padding-left: 10px;
+                        padding-left: 15px;
                         
                         svg
                         {
@@ -315,6 +313,55 @@ header
                                 & svg 
                                 {
                                     fill: black;
+                                }
+                            }
+                        }
+
+                        .dropdown-language
+                        {
+                            align-self: center;
+                        
+                            button
+                            {
+                                padding: 0px;
+                                margin: 0px;
+                                border: none;
+                                display: grid;
+                                background-color: transparent;
+                                cursor: pointer;
+                        
+                                svg
+                                {
+                                    color: var(--text-normal);
+                                    pointer-events: fill !important;
+                                }
+                            }
+                        
+                            .dropdown-content 
+                            {
+                                display: none;
+                                position: absolute;
+                                overflow: auto;
+                                z-index: 1;
+                        
+                                a
+                                {
+                                    font-weight: bold;
+                                    display: flex;
+                                    margin-top: 7.5px;
+                                    color: var(--text-normal);
+                                    
+                                    transition: all var(--hover-transition);
+                                    
+                                    font-size: var(--font-size-xxsm);
+                        
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                        
+                                    &:hover
+                                    {
+                                        text-decoration: underline;
+                                    }
                                 }
                             }
                         }
