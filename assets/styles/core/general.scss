@@ -19,6 +19,19 @@ html
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 0rem;
+
+    // Width
+    width: 85%;
+    max-width: 1536px;
+    padding: 0px 20px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1220px)
+    {
+        width: 100%;
+    }
+
+    // Height
     
     height: 100%;
 
@@ -27,28 +40,10 @@ html
     {
         height: 100%;
     }
-    
-    .main-wrapper, .footer-wrapper
-    {
-        // Width
-        width: 85%;
-        max-width: 1536px;
-        padding: 0px 20px;
-        margin: 0 auto;
-    
-        @media screen and (max-width: 1220px)
-        {
-            width: 100%;
-        }
-    }
-    
-    header, main, footer
-    {
-        // ....
-    }
 
     // Loading & resize transitions
-    // transition: opacity 0.5s ease-out, width .3s, transform .3s;
+    transition: opacity 0.5s ease-out, width .3s, transform .3s;
     // opacity: 0;
     // display: none;
+
 }

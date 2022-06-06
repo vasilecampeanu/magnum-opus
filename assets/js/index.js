@@ -68,12 +68,12 @@ function ThemeSwitcher(params) {
 
 function HideNavbar() {
     const body = document.body;
-    let lastScroll = 20;
+    let lastScroll = 0;
     
     window.addEventListener("scroll", () => {
         const currentScroll = window.pageYOffset;
     
-        if (currentScroll <= 20)
+        if (currentScroll <= 0)
         {
             body.classList.remove("scroll-up");
             return;
