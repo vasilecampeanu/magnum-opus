@@ -1,9 +1,108 @@
 .main-wrapper.home
 {
-    p
+    .introduction
     {
-        padding-bottom: 20px;
-        color: var(--text-normal);
-        display: none;
+        display: grid;
+        grid-template-areas: 
+        "about animation";
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+
+        gap: 20px;
+
+        min-height: calc(100vh - 80px - 64px);
+        
+        @media screen and (max-width: 1024px)
+        {
+            // grid-template-areas: 
+            // "animation"
+            // "about";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: start;
+            justify-self: start;
+        }
+
+        .about
+        {
+            grid-area: about;
+            justify-self: center;
+            align-self: center;
+            display: grid;
+            justify-content: center;
+
+            .subtitle
+            {
+                p
+                {
+                    font-size: var(--font-size-sm);
+                }
+            }
+
+            .title
+            {
+                h1
+                {
+                    font-size: var(--font-size-xlg);
+                    
+                    a
+                    {
+                        color: var(--text-accent);
+                        font-weight: bold;
+                        transition: all var(--hover-transition);
+    
+                        &:hover
+                        {
+                            color: var(--text-accent-hover);
+                        }
+                    }
+                }
+            }
+
+            .info
+            {
+                p
+                {
+                    font-size: var(--font-size-sm);
+                    
+                    span
+                    {
+                        font-weight: bold;
+                    }
+                    
+                    a
+                    {
+                        color: var(--text-accent);
+                        font-weight: bold;
+                        transition: all var(--hover-transition);
+    
+                        &:hover
+                        {
+                            color: var(--text-accent-hover);
+                        }
+                    }
+                }
+            }
+        }
+
+        .character-interaction
+        {
+            display: grid;
+            
+            @media screen and (max-width: 1024px)
+            {
+                display: none;
+            }
+
+            svg
+            {
+                justify-self: center;
+                align-self: center;
+                width:  500px;
+                height: 500px;
+                // opacity: .25;
+                fill: #272C33 !important;
+            }
+        }
     }
 }
