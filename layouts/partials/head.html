@@ -21,9 +21,16 @@
 {{/*  Lottie player  */}}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
 
+{{/*  ThreeJS  */}}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+
 {{/*  TweenMax script  */}}
 {{ $TweenMax := resources.Get "js/TweenMax.min.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $TweenMax.RelPermalink }}" {{ template "integrity" $TweenMax }}></script>
+
+{{/*  Character Interaction script  */}}
+{{ $characterInteraction := resources.Get "js/character-interaction.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $characterInteraction.RelPermalink }}" {{ template "integrity" $characterInteraction }}></script>
 
 {{/*  Main js script  */}}
 {{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
