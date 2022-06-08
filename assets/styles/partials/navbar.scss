@@ -16,26 +16,15 @@ header
         z-index: 9999;
         transition: all 300ms ease-in-out;
 
-        .container
+        .navbar-inner-wrapper
         {
             display: grid;
             grid-template-columns: auto 1fr auto;
 
-            // Width
-            width: 85%;
-            max-width: 1536px;
-            padding: 0px 20px;
-            margin: 0 auto;
-        
-            @media screen and (max-width: 1220px)
-            {
-                width: 100%;
-            }
-
             // Height
             height: 80px;
             
-            transition: width .3s, height .3s, transform .3s;
+            transition: height 1.5s, transform .3s;
 
             @media screen and (max-width: 768px)
             {
@@ -418,16 +407,19 @@ header
 
 .scroll-up 
 {
-	.navbar
-    {   
-        background-color: var(--background-seccondary);
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-        .container
-        {
-            height: 60px;
+    header
+    {
+        .navbar
+        {   
+            background-color: var(--background-seccondary);
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+            
+            .navbar-inner-wrapper
+            {
+                height: 60px;
+            }
         }
-	}
+    }
 }
 
 // .menu-is-open 

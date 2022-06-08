@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="notranslate" translate="no">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body id="body">
-        <div class="helper-components">
-            {{ partial "helper/loadingAnimation.html"}}
-            {{ block "blob-animation" . }}{{ end }}
-        </div>
-        <div id="site-wrapper" class="site-wrapper">
-            <header id="header">
-                {{ partial "header.html" . }}
-            </header>
-            <main id="main">
-                {{ block "main" . }}{{ end }}
-            </main>
-            <footer id="footer">
-                {{ partial "footer.html" . }}
-            </footer>
-        </div>
-    </body>
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body id="body">
+    <div class="helper-components">
+        {{ partial "helper/loadingAnimation.html"}}
+        {{ block "blob-animation" . }}{{ end }}
+    </div>
+    <div id="site-wrapper" class="site-wrapper">
+        {{ partial "header.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+    </div>
+</body>
 </html>

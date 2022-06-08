@@ -20,6 +20,24 @@ html
     grid-template-rows: auto 1fr auto;
     gap: 0rem;
 
+    // Height
+    
+    height: 100%;
+
+    // Width wrappers
+    .main-inner-wrapper
+    {
+        height: 100%;
+    }
+
+    // Loading & resize transitions
+    transition: opacity 0.5s ease-out, width .3s, transform .3s;
+    // opacity: 0;
+    // display: none;
+}
+
+.max-width-wrapper
+{
     // Width
     width: 85%;
     max-width: 1536px;
@@ -31,19 +49,5 @@ html
         width: 100%;
     }
 
-    // Height
-    
-    height: 100%;
-
-    // Width wrappers
-    .main-wrapper
-    {
-        height: 100%;
-    }
-
-    // Loading & resize transitions
-    transition: opacity 0.5s ease-out, width .3s, transform .3s;
-    // opacity: 0;
-    // display: none;
-
+    transition: width .3s, transform .3s;
 }

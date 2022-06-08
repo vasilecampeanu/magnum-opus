@@ -3,23 +3,25 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="main-wrapper home">
-        <div class="introduction">
-            <!-- Who I am ? -->
-            <div class="about">
-                <div class="subtitle">
-                    <p>Hi, I'm Vasile Câmpeanu - </p>
+    <main id="main">
+        <div class="main-inner-wrapper max-width-wrapper home">
+            <div class="introduction">
+                <!-- Who I am ? -->
+                <div class="about">
+                    <div class="subtitle">
+                        <p>Hi, I'm Vasile Câmpeanu - </p>
+                    </div>
+                    <div class="title">
+                        <h1>I'm a student, currently studying computer science at <a href="https://www.umfst.ro/en/home.html">UMFST</a> Târgu Mureș</h1>
+                    </div>
+                    <div class="info">
+                        <p>I am passionate about <span>artificial inteligence</span>, <span>bioinformatics</span> and <span>single-cell genomics</span>. My biggest interest lays in understanding the biological world from a computational standpoint.</p>
+                    </div>
                 </div>
-                <div class="title">
-                    <h1>I'm a student, currently studying computer science at <a href="https://www.umfst.ro/en/home.html">UMFST</a> Târgu Mureș</h1>
+                <div id="container" class="character-interaction">
+                    <canvas></canvas>
                 </div>
-                <div class="info">
-                    <p>I am passionate about <span>artificial inteligence</span>, <span>bioinformatics</span> and <span>single-cell genomics</span>. My biggest interest lays in understanding the biological world from a computational standpoint.</p>
-                </div>
-            </div>
-            <div id="container" class="character-interaction">
-                <canvas></canvas>
             </div>
         </div>
-    </div>
+    </main>
 {{ end }}

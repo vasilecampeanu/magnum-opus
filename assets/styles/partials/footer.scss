@@ -1,9 +1,9 @@
-.footer-wrapper
+.footer-inner-wrapper
 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     
-    padding: 20px 0px !important;
+    padding: 20px 20px !important;
     color: var(--text-normal);
     font-weight: bold;
 
