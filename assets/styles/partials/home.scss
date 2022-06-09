@@ -122,8 +122,15 @@
 
         canvas
         {
+            // Set width
             width: 100%;
             height: 100%;
+
+            // Remove transitions
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -o-transition: none !important;
+            transition: none !important;
         }
     }
 }

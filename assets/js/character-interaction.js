@@ -26,7 +26,7 @@ scene.add(light1);
 
 function resizeCanvasToDisplaySize() {
     const canvas = renderer.domElement;
-    const width = canvas.clientWidth;
+    const width  = canvas.clientWidth;
     const height = canvas.clientHeight;
     if (canvas.width !== width || canvas.height !== height) {
         // you must pass false here or three.js sadly fights the browser
@@ -37,6 +37,17 @@ function resizeCanvasToDisplaySize() {
         // set render target sizes here
     }
 }
+
+// window.onresize = function(event) {
+//     var canvas  = document.getElementById("character-interaction");
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight;
+// };
+
+$(window).resize(function() {
+    $("#character-interaction").attr("width",  $(window).width());
+    $("#character-interaction").attr("height", $(window).height());
+});
 
 function animate(time) {
     time *= 0.001;  // seconds
