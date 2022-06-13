@@ -283,28 +283,6 @@ header
                                 opacity: 0;
                             }
                         }
-                        
-                        [saved-theme="dark"] 
-                        {
-                            .theme-toggle 
-                            {
-                                & svg 
-                                {
-                                    fill: white;
-                                }
-                            }
-                        }
-                        
-                        [saved-theme="light"] 
-                        {
-                            .theme-toggle 
-                            {
-                                & svg 
-                                {
-                                    fill: black;
-                                }
-                            }
-                        }
 
                         .dropdown-language
                         {
@@ -334,7 +312,7 @@ header
                                 z-index: 1;
 
                                 padding: 5px;
-                                background-color: #13181F;
+                                background-color: var(--background-seccondary);
                                 // top: 5px;
                                 // left: 0;
                                 // width: 100%;
@@ -464,5 +442,27 @@ header
 {
     left: 8px;
     border: 10px solid transparent;
-    border-bottom-color: #13181F;
+    border-bottom-color: var(--background-seccondary);
+}
+
+[saved-theme="dark"] 
+{
+    .theme-toggle 
+    {
+        & svg 
+        {
+            color: white;
+        }
+    }
+}
+
+[saved-theme="light"] 
+{
+    .theme-toggle 
+    {
+        & svg 
+        {
+            color: black;
+        }
+    }
 }
