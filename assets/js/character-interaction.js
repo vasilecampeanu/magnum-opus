@@ -47,6 +47,7 @@ function resizeCanvasToDisplaySize() {
 $(window).resize(function() {
     $("#character-interaction").attr("width",  $(window).width());
     $("#character-interaction").attr("height", $(window).height());
+    console.log($(window).width());
 });
 
 function animate(time) {

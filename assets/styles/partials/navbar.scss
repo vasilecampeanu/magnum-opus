@@ -24,7 +24,7 @@ header
             // Height
             height: 80px;
             
-            transition: height .3s, transform .3s;
+            transition: width .3s, height .3s, transform .3s;
 
             @media screen and (max-width: 768px)
             {

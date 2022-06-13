@@ -16,4 +16,6 @@ The largest or best work of an artist.
 ---
 
 # Special Thanks
+- https://gohugo.io
 - https://lottiefiles.com
+- https://readyplayer.me/
