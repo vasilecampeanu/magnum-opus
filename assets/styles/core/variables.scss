@@ -1,19 +1,21 @@
 // Theme variables
-// Light theme variables
+// Dark theme variables
 :root
 {
     --background-primary: #0E141A;
     --background-seccondary: #13181F;
+    --pattern-color: #272D34;
     --text-normal: #ffffff;
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;
 }
 
-// Dark theme variables
+// Light theme variables
 [saved-theme="light"]
 {
     --background-primary: #FFFFFF;
     --background-seccondary: #F1F6F9;
+    --pattern-color: #767C82;
     --text-normal: #000000;
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;

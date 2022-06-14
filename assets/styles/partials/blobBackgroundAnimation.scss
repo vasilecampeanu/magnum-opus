@@ -37,14 +37,9 @@
     // Blob svg gradient 
     --stop-color: #2D3339;
 
-    .background-svg
-    {
-        opacity: 0.75;
-    }
-
     .background-svg svg path
     {
-        fill: #141A21; // fill: #10161D;
+        // fill: #141A21;
     }
 }
 
@@ -54,6 +49,6 @@
 
     .background-svg svg path
     {
-        fill: #f1f6f9;
+        // fill: #f1f6f9;
     }
 }
