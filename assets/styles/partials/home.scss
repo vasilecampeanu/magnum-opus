@@ -31,6 +31,12 @@
             display: grid;
             justify-content: center;
 
+            @media screen and (max-width: 1024px)
+            {
+                align-self: start;
+                margin-top: 75px;
+            }
+
             .subtitle
             {
                 p
@@ -90,51 +96,36 @@
 
         .character-interaction
         {
-            display: grid;
-            
+            width: 100%;
+            height: 100%;
+    
             @media screen and (max-width: 1024px)
             {
                 display: none;
             }
-
-            svg
+            
+            // grid-area: character;
+            // justify-self: center;
+            // align-self: center;
+            // display: grid;
+    
+            background-image: url(/attachements/pattern.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+    
+            canvas
             {
-                justify-self: center;
-                align-self: center;
-                width:  500px;
-                height: 500px;
-                // opacity: .25;
-                fill: #272C33 !important;
+                // Set width
+                width: 100%;
+                height: 100%;
+    
+                // Remove transitions
+                -webkit-transition: none !important;
+                -moz-transition: none !important;
+                -o-transition: none !important;
+                transition: none !important;
             }
-        }
-    }
-
-    .character-interaction
-    {
-        width: 100%;
-        height: 100%;
-        
-        // grid-area: character;
-        // justify-self: center;
-        // align-self: center;
-        // display: grid;
-
-        background-image: url(/attachements/pattern.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-
-        canvas
-        {
-            // Set width
-            width: 100%;
-            height: 100%;
-
-            // Remove transitions
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -o-transition: none !important;
-            transition: none !important;
         }
     }
 }

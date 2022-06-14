@@ -107,6 +107,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// --------------------------------------------------------------------------------------------
+// Mobile navbar
+// --------------------------------------------------------------------------------------------
+var burger = document.getElementById('burger'),
+    nav    = document.getElementById('mobile-navbar');
+
+burger.addEventListener('click', function(e) {
+    this.classList.toggle('is-open');
+    nav.classList.toggle('is-open');
+    body.classList.toggle('hide-overflow');
+});
+
 // Navigation bar hide on scroll down, show on scroll up
 function hasClass(element, cls) {
     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;

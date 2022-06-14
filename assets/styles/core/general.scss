@@ -51,3 +51,8 @@ html
 
     transition: width .3s, transform .3s;
 }
+
+.hide-overflow
+{
+    overflow: hidden !important;
+}
