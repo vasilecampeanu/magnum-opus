@@ -18,7 +18,7 @@ function blobBackgroundAnimation() {
     }).to(".blob", 3, {
         attr: 
         {
-            d: "M452.9 141.3c41.2 47 67.6 102.8 56.3 147.4-11.3 44.5-60.4 77.8-101.6 120.6-41.1 42.8-74.4           95.3-117.3 104.9-42.9 9.7-95.4-23.4-122.1-66.2-26.7-42.9-27.4-95.4-32.6-153.2-5.2-57.7-14.8-120.7 11.9-167.7 26.6-47 89.6-78 149-74.5 59.4 3.5 115.2 41.7 156.4 88.7z",
+            d: "M452.9 141.3c41.2 47 67.6 102.8 56.3 147.4-11.3 44.5-60.4 77.8-101.6 120.6-41.1 42.8-74.4 95.3-117.3 104.9-42.9 9.7-95.4-23.4-122.1-66.2-26.7-42.9-27.4-95.4-32.6-153.2-5.2-57.7-14.8-120.7 11.9-167.7 26.6-47 89.6-78 149-74.5 59.4 3.5 115.2 41.7 156.4 88.7z",
         }
     }).to(".blob", 3, {
         attr: 
@@ -34,9 +34,10 @@ function blobBackgroundAnimation() {
 }
 
 // Theme
+const defaultTheme = 'dark';
+const currentTheme = localStorage.getItem('theme') ?? defaultTheme;
+
 function ThemeSwitcher(params) {
-    const defaultTheme = 'dark';
-    const currentTheme = localStorage.getItem('theme') ?? defaultTheme;
 
     if (currentTheme)
     {
@@ -52,6 +53,12 @@ function ThemeSwitcher(params) {
             // Switch theme
             document.documentElement.setAttribute('saved-theme', 'dark');
             localStorage.setItem('theme', 'dark');
+
+            // Toggle checkbox
+            const checkbox = document.getElementById('darkmode-toggle');
+            if(!checkbox.checked)
+                checkbox.checked = !checkbox.checked;
+            console.log(checkbox.checked);
         }
     
         if (event.ctrlKey && (event.which === 76)) 
@@ -62,10 +69,45 @@ function ThemeSwitcher(params) {
             // Switch theme
             document.documentElement.setAttribute('saved-theme', 'light');
             localStorage.setItem('theme', 'light');
+            
+            const checkbox = document.getElementById('darkmode-toggle');
+            console.log(checkbox.checked);
+
+            if(checkbox.checked)
+            {
+                checkbox.checked = !checkbox.checked;
+            }
         }
     });
 }
 
+const switchTheme = (e) => {
+    if (e.target.checked) 
+    {
+        document.documentElement.setAttribute('saved-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } 
+    else 
+    {
+        document.documentElement.setAttribute('saved-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    // Darkmode toggle
+    const toggleSwitch = document.querySelector('#darkmode-toggle');
+
+    // listen for toggle
+    toggleSwitch.addEventListener('change', switchTheme, false);
+
+    if (currentTheme === 'dark') 
+    {
+        toggleSwitch.checked = true;
+    }
+});
+
+// Navigation bar hide on scroll down, show on scroll up
 function hasClass(element, cls) {
     return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
