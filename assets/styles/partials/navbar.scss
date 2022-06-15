@@ -387,7 +387,7 @@ header
             height: 100vh; /* Fallback for browsers that do not support Custom Properties */
             height: calc(var(--vh, 1vh) * 100);
 
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             left: 0;
