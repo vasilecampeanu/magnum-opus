@@ -384,6 +384,9 @@ header
     
         .links
         {
+            height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+            height: calc(var(--vh, 1vh) * 100);
+
             position: absolute;
             top: 0;
             right: 0;
@@ -435,10 +438,8 @@ header
                 display: inline-flex;
                 flex-direction: column;
         
-                height: 100vh;
-                height: -moz-available;          /* WebKit-based browsers will ignore this. */
-                height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-                height: fill-available;
+                height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+                // height: calc(var(--vh, 1vh) * 100);
     
                 align-items: flex-end;
                 justify-content: center;
@@ -465,6 +466,7 @@ header
                         font-size: var(--font-size-xsm);
                         text-transform: uppercase;
                         font-weight: bold;
+
                         svg
                         {
                             padding-right: 5px;
