@@ -1,0 +1,15 @@
+.loadingAnimation
+{
+    display: grid;
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #0E141A;
+    z-index: 99999;
+}
+
+.loadingAnimation lottie-player
+{
+    justify-self: center;
+    align-self: center;
+}

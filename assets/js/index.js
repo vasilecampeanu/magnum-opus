@@ -1,7 +1,28 @@
+"use strict"
+
 // On page load
-function pageLoad() {
-    // CCode here
+$(window).on('load', function () {
+    setTimeout(removeLoader, 1000); // Wait for page load PLUS one second
+});
+
+// Remove loading animation
+function removeLoader() {
+    $( "#loading" ).fadeOut(350, function() {
+        $( "#loading" ).remove();
+    });
 }
+
+// This ill only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
+$(document).ready(function () {
+    // Enable blob background animation
+    blobBackgroundAnimation();
+
+    // Theme
+    ThemeSwitcher();
+
+    // Navigation bar
+    HideNavbar();
+});
 
 // Blob animation
 function blobBackgroundAnimation() {
@@ -107,9 +128,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --------------------------------------------------------------------------------------------
 // Mobile navbar
-// --------------------------------------------------------------------------------------------
 var burger = document.getElementById('burger'),
     nav    = document.getElementById('mobile-navbar');
 
@@ -155,21 +174,6 @@ function HideNavbar() {
         lastScroll = currentScroll;
     });
 }
-
-$(document).ready(function () {
-    // Preload
-    pageLoad();
-
-    // Afterload code here ...
-    // Enable blob background animation
-    blobBackgroundAnimation();
-
-    // Theme
-    ThemeSwitcher();
-
-    // Navigation bar
-    HideNavbar();
-});
 
 // Language switch
 // Close the dropdown if the user clicks outside of it
