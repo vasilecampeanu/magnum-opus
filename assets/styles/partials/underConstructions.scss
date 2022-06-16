@@ -5,11 +5,18 @@
     display: grid;
     justify-content: center;
     align-content: center;
+    color: var(--text-normal);
 
     lottie-player
     {
         width:  400px !important;
-        height: 400px !important; 
+        height: 400px !important;
+       
+        @media screen and (max-width: 1024px)
+        {   
+            width:  350px !important;
+            height: 350px !important;    
+        }
     }
 
     h2
