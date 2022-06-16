@@ -2,5 +2,9 @@
 <div class="underConstruction">
     {{ $underConstructionAnimation := resources.Get "animations/json/underConstructionAnimation.json" }}
     <lottie-player src="{{ $underConstructionAnimation.RelPermalink }}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-    <h2>UNDER CONSTRUCTION</h2>
+    {{ if eq .Site.Language.LanguageName "English" }}
+        <h2>UNDER CONSTRUCTION</h2>
+    {{ else if eq .Site.Language.LanguageName "Romanian" }}
+        <h2>IN CONSTRUCTIE</h2>
+    {{ end}}
 </div>

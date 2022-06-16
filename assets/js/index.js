@@ -22,7 +22,10 @@ $(document).ready(function () {
     ThemeSwitcher();
 
     // Navigation bar
-    HideNavbar();
+    if($(document).height() > $(window).height())
+    {
+        HideNavbar();
+    }
 });
 
 // Blob animation
