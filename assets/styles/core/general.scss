@@ -36,7 +36,8 @@ html
     }
 
     // Resize transitions
-    transition: width .3s, transform .3s;
+    transition: opacity .5s ease-out, width .3s, transform .3s;
+    opacity: 0;
 }
 
 .max-width-wrapper

@@ -7,9 +7,10 @@ $(window).on('load', function () {
 
 // Remove loading animation
 function removeLoader() {
-    $( "#loading" ).fadeOut(350, function() {
-        $( "#loading" ).remove();
+    $('#loading').fadeOut(350, function() {
+        $('#loading').remove();
     });
+    $('#site-wrapper').css('opacity', '1');
 }
 
 // This ill only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
