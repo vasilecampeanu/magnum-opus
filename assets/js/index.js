@@ -11,6 +11,7 @@ function removeLoader() {
         $('#loading').remove();
     });
     $('#site-wrapper').css('opacity', '1');
+    body.classList.remove('hide-overflow');
 }
 
 // This ill only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
