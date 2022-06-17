@@ -14,3 +14,8 @@
         </div>
     </div>
 </footer>
+
+{{/*  Includes  */}}
+{{/*  Main js script  */}}
+{{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $index.RelPermalink }}" {{ template "integrity" $index }}></script>

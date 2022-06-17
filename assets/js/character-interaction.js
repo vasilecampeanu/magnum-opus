@@ -1,5 +1,3 @@
-"use strict";
-
 const renderer = new THREE.WebGLRenderer({ alpha:true, canvas: document.querySelector("canvas") });
 
 // There's no reason to set the aspect here because we're going

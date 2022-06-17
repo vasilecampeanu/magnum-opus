@@ -12,6 +12,13 @@
 {{ $styles := resources.Get "styles/styles.scss" | resources.ExecuteAsTemplate "styles.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" {{ template "integrity" $styles }}>
 
+{{/*  Integrity  */}}
+{{ define "integrity" }}
+    {{ if (urls.Parse .Permalink).Host }}
+        integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
+    {{ end }}
+{{ end }}
+
 {{/*  Scripts  */}}
 {{/*  Temporary include JS here  */}}
 {{/*  External libraries  */}}
@@ -21,24 +28,6 @@
 {{/*  Lottie player  */}}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
 
-{{/*  ThreeJS  */}}
-<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
-
 {{/*  TweenMax script  */}}
 {{ $TweenMax := resources.Get "js/TweenMax.min.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $TweenMax.RelPermalink }}" {{ template "integrity" $TweenMax }}></script>
-
-{{/*  Character Interaction script  */}}
-{{ $characterInteraction := resources.Get "js/character-interaction.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $characterInteraction.RelPermalink }}" {{ template "integrity" $characterInteraction }}></script>
-
-{{/*  Main js script  */}}
-{{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $index.RelPermalink }}" {{ template "integrity" $index }}></script>
-
-{{/*  Integrity  */}}
-{{ define "integrity" }}
-    {{ if (urls.Parse .Permalink).Host }}
-        integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
-    {{ end }}
-{{ end }}

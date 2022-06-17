@@ -1,5 +1,3 @@
-"use strict"
-
 // On page load
 $(window).on('load', function () {
     setTimeout(removeLoader, 1000); // Wait for page load PLUS one second
