@@ -12,6 +12,23 @@ function removeLoader() {
     body.classList.remove('hide-overflow');
 }
 
+// Highlight
+const links = document.getElementsByTagName('a')
+const current_url = location.href;
+const post_page = "/posts";
+
+console.log("Post page: " + current_url.includes(post_page));
+
+if (current_url.includes(post_page)) {
+    const blog_url = current_url.substring(0, current_url.lastIndexOf(post_page)) + '/';
+
+    for (const link of links) {
+        if (link.href === blog_url) {
+            link.classList.add('active')
+        }
+    }
+}
+
 // This ill only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
 $(document).ready(function () {
     // Enable blob background animation
