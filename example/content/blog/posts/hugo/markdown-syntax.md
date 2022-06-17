@@ -1,6 +1,7 @@
 ---
 title: "Markdown Syntax"
 description: "Sample article showcasing basic markdown syntax and formatting for HTML elements."
+date: 2022-07-17
 ---
 
 # Introduction
@@ -65,3 +66,5 @@ int main(int argc, char argv**)
     return 0;
 }
 ```
+
+# Built in shortcodes
