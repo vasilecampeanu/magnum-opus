@@ -2,6 +2,24 @@
 {{ define "main" }}
     <main id="main">
         <div class="main-inner-wrapper  max-width-wrapper single">
+            <div class="article-header">
+                {{ $date := .Date.Format "Jan 2, 2006" }}
+                {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}
+                Published {{ $date }}
+                {{ if and (ne $lastmod $date) (gt .Lastmod .Date) }}
+                    <br/>Last Modified: {{ $lastmod }}
+                {{ end }}
+
+                {{/*  {{ .GitInfo | jsonify }}  */}}
+
+                {{ if .GitInfo }}
+                    <p style="font-size: small; color: grey;">Last commit: {{ .GitInfo.AbbreviatedHash }} {{.GitInfo.CommitDate}}</p>
+                {{ end }}
+
+                {{ with .GitInfo }}
+                    <p style="font-size: small; color: grey;">Page version: {{ .AbbreviatedHash }} {{ .CommitDate.Format "2006-01-02"}}</p>
+                {{ end }}
+            </div>
             <section class="article-content">
                 <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
                 {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}

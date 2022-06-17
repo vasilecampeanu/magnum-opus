@@ -1,7 +1,7 @@
 ---
 title: "Markdown Syntax"
 description: "Sample article showcasing basic markdown syntax and formatting for HTML elements."
-date: 2022-07-17
+date: 2022-03-18T21:10:00+07:00
 ---
 
 # Introduction

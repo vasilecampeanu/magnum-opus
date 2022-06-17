@@ -1,0 +1,17 @@
+<div class="post-info-date">
+    <!-- Created Date -->
+    {{ $publish_date := .Date.Format "Jan 2, 2006" }}
+    <div class="post-info-creation-date">
+        <p>Created: <time datetime="{{ .Date }}" title="{{ .Date }}">{{ $publish_date }}</time></p>
+    </div>
+    
+    <!-- Last Updated Date -->
+    {{ if .Lastmod }}
+        {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}
+        {{ if and (ne $lastmod $publish_date) (gt .Lastmod .Date) }}
+            <div class="post-info-last-mod">
+                <p>Updated: <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">{{ $lastmod }}</time></p>
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
