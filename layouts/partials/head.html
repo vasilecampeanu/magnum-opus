@@ -23,7 +23,9 @@
 {{/*  Temporary include JS here  */}}
 {{/*  External libraries  */}}
 {{/*  jQuery  */}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{{ $jquery := resources.Get "./js/jquery.min.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $jquery.RelPermalink }}" {{ template "integrity" $jquery }}></script>
 
 {{/*  Lottie player  */}}
-<script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+{{ $lottiePlayer := resources.Get "./js/lottie-player.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $lottiePlayer.RelPermalink }}" {{ template "integrity" $lottiePlayer }}></script>
