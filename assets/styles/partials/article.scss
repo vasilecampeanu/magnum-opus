@@ -2,10 +2,42 @@
 {
     // Compute correct width
     width: calc(100vw * 85 / 100 - 40px);
+    color: var(--text-normal);
 
     @media screen and (max-width: 1220px)
     {
         width: calc(100vw - 40px);
+    }
+
+    // Headings
+    h1
+    {
+        font-size: var(--font-size-xlg);
+    }
+
+    h2
+    {
+        font-size: var(--font-size-lg);
+    }
+
+    h3
+    {
+        font-size: var(--font-size-m);
+    }
+
+    h4
+    {
+        font-size: var(--font-size-sm);
+    }
+
+    h5
+    {
+        font-size: var(--font-size-xsm);
+    }
+
+    h6
+    {
+        font-size: var(--font-size-xxsm);
     }
 
     // Code blocks
@@ -32,6 +64,9 @@
             border: none;
             background: none;
             padding: 0;
+            font-family: "Cascadia" !important;
+            font-size: var(--font-size-xsm);
+            font-weight: bold;
         }
 
         &::-webkit-scrollbar 
@@ -42,9 +77,12 @@
 
     .highlight 
     {
-        background-color: var(--pre-background-color);
         position: relative;
-
+        padding: 15px;
+        border-radius: 10px;
+        background-color: var(--background-code-block);
+        color: var(--text-syntax-highlight-color);
+        
         &:hover 
         {
             .copyCodeButton 

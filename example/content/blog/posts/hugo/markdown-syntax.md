@@ -66,6 +66,25 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 </html>
 ```
 
+```css
+.spinner 
+{
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+```
+
+```cpp
+#include <iostream>
+
+int main(int argc, char argv**)
+{
+    int x = 10;
+    std::cout << "Hello world!" << std::endl;
+}
+```
+
 ### Code block with Hugo's internal highlight shortcode
 {{< highlight html >}}
 <!doctype html>
@@ -75,6 +94,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
     <title>Example HTML5 Document.</title>
 </head>
 <body>
+    <!-- This is just a comment -->
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus ligula id ex porttitor aliquam. Curabitur ullamcorper eu sem a efficitur. Vivamus accumsan enim id sem dignissim fringilla. Curabitur pretium, risus at laoreet semper, ipsum nunc sodales eros, at elementum neque ante volutpat nunc. Sed ultrices risus risus, ut fringilla orci condimentum vel. Suspendisse ut lobortis augue. Nulla molestie risus sit amet massa blandit, dapibus sodales massa ultricies. Curabitur augue purus, elementum ut suscipit nec, rhoncus vitae lorem. Mauris quis tellus quis felis eleifend bibendum sit amet a ex. Phasellus imperdiet, ligula sed viverra tempus, quam leo pellentesque felis, ac consectetur magna nisl non urna. Duis a nunc lorem. Pellentesque sollicitudin, mauris sed vulputate sodales, quam arcu lobortis felis, et efficitur mauris sem sed mi. Sed gravida odio in mi euismod ullamcorper. Maecenas consectetur, mi ac rhoncus rutrum, risus est auctor quam, sit amet sagittis magna velit a enim. Aliquam in nisi sed leo pretium dignissim ac ut felis. Praesent varius nec nunc porttitor porta.
     </p>

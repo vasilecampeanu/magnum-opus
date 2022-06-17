@@ -4,10 +4,12 @@
 {
     --background-primary: #0E141A;
     --background-secondary: #13181F;
+    --background-code-block: rgb(27, 32, 37);
     --pattern-color: #272D34;
-    --text-normal: #ffffff;
+    --text-normal: #FFFFFF;
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;
+    --text-syntax-highlight-color: #FFFFFF;
 }
 
 // Light theme variables
@@ -15,10 +17,12 @@
 {
     --background-primary: #FFFFFF;
     --background-secondary: #F1F6F9;
+    --background-code-block: #F5F6F9;
     --pattern-color: #767C82;
     --text-normal: #000000;
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;
+    --text-syntax-highlight-color: #2A2A2A;
 }
 
 // Transitions

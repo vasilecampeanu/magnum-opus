@@ -10,6 +10,9 @@
 // General styles
 @import "./core/general.scss";
 
+// Sintax highlight
+@import "./core/syntax-highlight.scss";
+
 // Partials
 @import "./partials/blobBackgroundAnimation.scss";
 @import "./partials/error404.scss";
