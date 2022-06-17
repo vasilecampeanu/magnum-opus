@@ -43,15 +43,28 @@ header
                     font-size: var(--font-size-xlg);
                     font-weight: bold;
                     align-self: center;
-                    
+
                     span
                     {
                         color: var(--text-accent);
                     }
-        
-                    @media screen and (max-width: 768px)
+
+                    &.logo-desktop
                     {
-                        font-size: var(--font-size-lg);
+                        @media screen and (max-width: 768px)
+                        {
+                            display: none;
+                        }
+                    }
+
+                    &.logo-mobile
+                    {
+                        display: none;
+
+                        @media screen and (max-width: 768px)
+                        {
+                            display: block;
+                        }
                     }
                 }
             }
