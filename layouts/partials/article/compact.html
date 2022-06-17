@@ -1,0 +1,17 @@
+<article>
+    <div class="article-compact">
+        <a href="{{ .RelPermalink }}">
+            <div class="article-title">
+                <p>{{ .Title }}</p>
+            </div>
+            <div class="article-description">
+                <p>
+                    {{ with .Params.description }}
+                        {{ . }}
+                    {{ end }}
+                </p>
+                <span>READ MORE <span class="arrow-right">&#8594;</span></span>
+            </div>
+        </a>
+    </div>
+</article>

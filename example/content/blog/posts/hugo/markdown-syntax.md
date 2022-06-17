@@ -1,5 +1,6 @@
 ---
 title: "Markdown Syntax"
+description: "Sample article showcasing basic markdown syntax and formatting for HTML elements."
 ---
 
 # Introduction
@@ -23,6 +24,7 @@ Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptio
 Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
 # Lists
+Example of lists that can be created in markdown.
 ## Ordered List
 
 1. First item
