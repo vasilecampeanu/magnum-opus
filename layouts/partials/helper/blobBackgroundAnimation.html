@@ -1,3 +1,7 @@
+{{/*  TweenMax script  */}}
+{{ $TweenMax := resources.Get "js/TweenMax.min.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $TweenMax.RelPermalink }}" {{ template "integrity" $TweenMax }}></script>
+
 {{/*  Background blob animation displayed on the home page.  */}}
 <div class="backgroundAnimation">
     <div class="background-svg">

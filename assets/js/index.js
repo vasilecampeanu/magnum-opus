@@ -15,7 +15,13 @@ function removeLoader() {
 // This ill only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
 $(document).ready(function () {
     // Enable blob background animation
-    blobBackgroundAnimation();
+    var current = window.location.pathname;
+    
+    // Play animation only when on main page
+    if (current == '/') 
+    {
+        blobBackgroundAnimation();
+    }
 
     // Theme
     ThemeSwitcher();
