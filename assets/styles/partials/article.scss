@@ -2,11 +2,22 @@
 {
     // Compute correct width
     width: calc(100vw * 85 / 100 - 40px);
-    color: var(--text-normal);
 
     @media screen and (max-width: 1220px)
     {
         width: calc(100vw - 40px);
+    }
+
+    // Article text size
+    font-size: var(--font-size-sm);
+    color: var(--text-normal);
+
+    // Hr style
+    hr
+    {
+        margin: 25px 0px;
+        border: 1px solid var(--text-normal);
+        opacity: .5;
     }
 
     // Headings
@@ -32,12 +43,72 @@
 
     h5
     {
-        font-size: var(--font-size-xsm);
+        font-size: var(--font-size-sm);
     }
 
     h6
     {
-        font-size: var(--font-size-xxsm);
+        font-size: var(--font-size-sm);
+    }
+
+    h1, h2, h3, h4, h5, h6
+    {
+        padding: 10px 0px 10px 0px;
+    }
+
+    // Paragraphs
+    & > p 
+    {
+        margin: 1.5em 0;
+    }
+
+    // Lists
+    // Reset number list aligment
+    ul 
+    {
+        margin-inline-start: 20px;
+        
+        li
+        {
+            display: flexbox;
+            
+            .highlight
+            {
+                justify-self: start;
+                margin-top: 20px;
+                width: 100% !important;
+                margin: 10px 0px !important;
+            }
+
+            p
+            {
+                padding: 0px;
+            }
+        }
+    }
+    
+    // Reset number list aligment
+    ol
+    {
+        margin-inline-start: 27.5px;
+        
+        li
+        {
+            display: flexbox;
+            
+            .highlight
+            {
+                justify-self: start;
+                margin-top: 20px;
+                width: 100% !important;
+                margin: 0px 0px !important;
+            }
+
+            p
+            {
+                padding: 0px;
+            }
+        }
     }
 
     // Code blocks
@@ -65,7 +136,7 @@
             background: none;
             padding: 0;
             font-family: "Cascadia" !important;
-            font-size: var(--font-size-xsm);
+            font-size: var(--font-size-sm);
             font-weight: bold;
         }
 
