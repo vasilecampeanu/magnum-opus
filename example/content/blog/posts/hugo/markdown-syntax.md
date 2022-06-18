@@ -72,9 +72,6 @@ int main(int argc, char argv**)
 ## Youtube
 {{< youtube EgW9_2q1IoA >}}
 
-## Vimeo
-{{< vimeo 146022717 >}}
-
 # Custom shortcodes
 ## Callouts
 {{< callout info >}}

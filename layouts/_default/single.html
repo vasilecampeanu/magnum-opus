@@ -4,10 +4,20 @@
         <div class="main-inner-wrapper max-width-wrapper single">
             <article class="post-single">
                 <div class="article-header">
+                    <div class="title">
+                        {{ .Title }}
+                    </div>
+                    <div class="decription">
+                        {{ .Description }}
+                    </div>
                     {{ partial "helper/articleDateInfo.html" . }}
-                    {{/*  https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/  */}}
-                    {{ range (where .Data.Pages "Section" "posts").ByDate.Reverse }}
-                        {{ .Date.Format  "Jan 02, 2006" }} » <a href="{{ .RelPermalink }}">{{ .Title }}</a><br/>
+                    {{ if .Site.Params.article.readingTime }}
+                        <div class="reading-time">
+                            {{ partial "helper/icon" "clock" }}
+                            <time>
+                                {{ .ReadingTime }} minute read
+                            </time>
+                        </div>
                     {{ end }}
                 </div>
                 <section class="article-content">

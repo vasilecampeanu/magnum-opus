@@ -1,10 +1,13 @@
 <div class="post-info-date">
+    {{ partial "helper/icon" "calendar" }}
     <!-- Created Date -->
     {{ $publish_date := .Date.Format "Jan 2, 2006" }}
     <div class="post-info-creation-date">
         <p>Created: <time datetime="{{ .Date }}" title="{{ .Date }}">{{ $publish_date }}</time></p>
     </div>
-    
+    <div class="separator">
+        &#8722;
+    </div>
     <!-- Last Updated Date -->
     {{ if .Lastmod }}
         {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}

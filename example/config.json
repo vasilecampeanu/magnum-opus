@@ -101,6 +101,10 @@
     {
         "posts": "blog/posts/",
         "dateFormat": "02 Jan 2006",
+        "article": 
+        {
+            "readingTime": true
+        },
         "socialMedia":
         {
             "general":

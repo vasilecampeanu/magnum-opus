@@ -4,8 +4,69 @@
     grid-template-columns: 70% 1fr;
     gap: 2rem;
 
+    @media screen and (max-width: 768px)
+    {
+        gap: 0;
+        grid-template-columns: 100%;
+    }
+
     .post-single
     {
+        .article-header
+        {
+            display: grid;
+            margin-bottom: 25px;
+
+            .title
+            {
+                font-size: 42px;
+                font-weight: bold;
+            }
+
+            .decription
+            {
+                margin-bottom: 10px;
+                font-size: var(--font-size-sm);
+                font-weight: bold;
+                color: var(--article-description-color);
+            }
+            
+            .post-info-date
+            {
+                display: inline-flex;
+                gap: 5px;
+                font-size: var(--font-size-sm);
+                font-weight: bold;
+                // color: var(--article-description-color);
+                
+                svg
+                {
+                    stroke-width: 3;
+                    width: var(--font-size-sm);
+                    height: var(--font-size-sm);
+                    align-self: center;
+                }
+            }
+
+            .reading-time
+            {
+                display: inline-flex;
+                gap: 5px;
+                font-size: var(--font-size-sm);
+                font-weight: bold;
+                margin-top: 10px;
+                // color: var(--article-description-color);
+                
+                svg
+                {
+                    stroke-width: 3;
+                    width: var(--font-size-sm);
+                    height: var(--font-size-sm);
+                    align-self: center;
+                }
+            }
+        }
+
         .article-content
         {
             // Compute correct width
