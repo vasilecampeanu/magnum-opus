@@ -24,8 +24,13 @@
             
             .title
             {
-                font-size: 42px;
+                font-size: var(--article-title-desktop);
                 font-weight: bold;
+
+                @media screen and (max-width: 768px)
+                {
+                    font-size: var(--article-title-mobile);
+                }
             }
 
             .decription
@@ -40,10 +45,9 @@
             {
                 // display: inline-flex;
                 display: inline-flex;
-                gap: 20px;
+                gap: 10px;
                 font-size: var(--font-size-sm);
                 font-weight: bold;
-                // color: var(--article-description-color);
                 
                 @media screen and (max-width: 768px)
                 {
@@ -78,8 +82,33 @@
                 gap: 5px;
                 font-size: var(--font-size-sm);
                 font-weight: bold;
-                // color: var(--article-description-color);
                 
+                svg
+                {
+                    stroke-width: 3;
+                    width: var(--font-size-sm);
+                    height: var(--font-size-sm);
+                    align-self: center;
+                }
+            }
+
+            .article-translations
+            {
+                display: inline-flex;
+                gap: 5px;
+                font-size: var(--font-size-sm);
+                font-weight: bold;
+                color: var(--text-normal);
+                a
+                {
+                    color: var(--text-normal);
+                    text-decoration: none;
+                    
+                    &:hover
+                    {
+                        text-decoration: underline;
+                    }
+                }
                 svg
                 {
                     stroke-width: 3;
@@ -94,6 +123,18 @@
         {
             padding: 15px;
             margin-bottom: 450px;
+
+            @media screen and (max-width: 768px)
+            {
+                padding: 0px;
+                margin-bottom: 0px;    
+            }
+
+            @media screen and (max-width: 1024px)
+            {
+                margin-bottom: 0px;    
+            }
+
             // background-color: var(--background-secondary);
 
             // Compute correct width

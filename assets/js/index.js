@@ -35,8 +35,8 @@ $(document).ready(function () {
     var current = window.location.pathname;
     
     if (current != "/") {
-        console.log("Not on home page!");
-        document.getElementById("desktop-navbar").style.backgroundColor = "var(--background-primary)";
+        // console.log("Not on home page!");
+        // document.getElementById("desktop-navbar").style.backgroundColor = "var(--background-primary)";
     }
 
     // Play animation only when on main page

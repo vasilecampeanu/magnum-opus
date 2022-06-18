@@ -14,6 +14,16 @@
                         {{ .Description }}
                     </div>
                     {{ partial "helper/articleDateInfo.html" . }}
+                    {{ if .IsTranslated }}
+                        <div class="article-translations">
+                            {{ partial "helper/icon" "languages" }}
+                            <div>
+                                {{ range .Translations }}
+                                    Translations: <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
                     {{ if .Site.Params.article.readingTime }}
                         <div class="reading-time">
                             {{ partial "helper/icon" "clock" }}
