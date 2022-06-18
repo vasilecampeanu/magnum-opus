@@ -3,21 +3,10 @@
     <main id="main">
         <div class="main-inner-wrapper  max-width-wrapper single">
             <div class="article-header">
-                {{ $date := .Date.Format "Jan 2, 2006" }}
-                {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}
-                Published {{ $date }}
-                {{ if and (ne $lastmod $date) (gt .Lastmod .Date) }}
-                    <br/>Last Modified: {{ $lastmod }}
-                {{ end }}
-
-                {{/*  {{ .GitInfo | jsonify }}  */}}
-
-                {{ if .GitInfo }}
-                    <p style="font-size: small; color: grey;">Last commit: {{ .GitInfo.AbbreviatedHash }} {{.GitInfo.CommitDate}}</p>
-                {{ end }}
-
-                {{ with .GitInfo }}
-                    <p style="font-size: small; color: grey;">Page version: {{ .AbbreviatedHash }} {{ .CommitDate.Format "2006-01-02"}}</p>
+                {{ partial "helper/articleDateInfo.html" . }}
+                {{/*  https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/  */}}
+                {{ range (where .Data.Pages "Section" "posts").ByDate.Reverse }}
+                    {{ .Date.Format  "Jan 02, 2006" }} » <a href="{{ .RelPermalink }}">{{ .Title }}</a><br/>
                 {{ end }}
             </div>
             <section class="article-content">
