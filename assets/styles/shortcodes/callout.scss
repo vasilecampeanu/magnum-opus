@@ -1,0 +1,26 @@
+$callout-colors: 
+(
+    info: #6bf,
+    warning: #fd6,
+    danger: #f66,
+) !default;
+
+// {{< callout name >}}
+// ...
+// {{< /callout >}}
+.callout 
+{
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    @each $name, $color in $callout-colors 
+    {
+        &.#{$name} 
+        {
+            border-left: 5px solid;
+            border-color: $color;
+            background-color: rgba($color, 0.15) !important;
+        }
+    }
+}

@@ -11,12 +11,14 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+```md
+# H1 Heading
+## H2 Heading
+### H3 Heading
+#### H4 Heading
+##### H5 Heading
+###### H6 Heading
+```
 
 # Paragraphs
 
@@ -68,3 +70,28 @@ int main(int argc, char argv**)
 ```
 
 # Built in shortcodes
+## Gist
+{{< gist spf13 7896402 >}}
+
+## Youtube
+{{< youtube EgW9_2q1IoA >}}
+
+## Vimeo
+{{< vimeo 146022717 >}}
+
+# Custom shortcodes
+## Callouts
+{{< callout info >}}
+**Info callout**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa.
+{{< /callout >}}
+
+{{< callout warning >}}
+**Warning callout**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa.
+{{< /callout >}}
+
+{{< callout danger >}}
+**Danger callout**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa.
+{{< /callout >}}
