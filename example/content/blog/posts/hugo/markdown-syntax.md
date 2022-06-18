@@ -61,15 +61,13 @@ int main(int argc, char argv**)
     int x = 10;
     
     // This is a single line comment
-    std::cout << "Hello world!" << std::endl;
+    std::cout << "Hello world! This is just a regullar test" << std::endl;
 
     return 0;
 }
 ```
 
 # Built in shortcodes
-## Gist
-{{< gist spf13 7896402 >}}
 
 ## Youtube
 {{< youtube EgW9_2q1IoA >}}

@@ -1,210 +1,220 @@
-.article-content
+.main-inner-wrapper.single
 {
-    // Compute correct width
-    width: calc(100vw * 85 / 100 - 40px);
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    gap: 2rem;
 
-    @media screen and (max-width: 1220px)
+    .post-single
     {
-        width: calc(100vw - 40px);
-    }
-    
-    // Add space to bottom of the article
-    // margin-bottom: 300px;
-
-    // Article text size
-    font-size: var(--font-size-sm);
-    color: var(--text-normal);
-
-    // Hr style
-    hr
-    {
-        margin: 25px 0px;
-        border: 1px solid var(--text-normal);
-        opacity: .5;
-    }
-
-    // Headings
-    h1
-    {
-        font-size: var(--font-size-xlg);
-    }
-
-    h2
-    {
-        font-size: var(--font-size-lg);
-    }
-
-    h3
-    {
-        font-size: var(--font-size-m);
-    }
-
-    h4
-    {
-        font-size: var(--font-size-sm);
-    }
-
-    h5
-    {
-        font-size: var(--font-size-sm);
-    }
-
-    h6
-    {
-        font-size: var(--font-size-sm);
-    }
-
-    h1, h2, h3, h4, h5, h6
-    {
-        padding: 10px 0px 10px 0px;
-    }
-
-    h1:hover .anchor,
-    h2:hover .anchor,
-    h3:hover .anchor,
-    h4:hover .anchor,
-    h5:hover .anchor,
-    h6:hover .anchor 
-    {
-        display: inline-flex;
-        color: var(--text-normal);
-        margin-inline-start: 8px;
-        font-weight: 500;
-        user-select: none;
-        font-size: .75em;
-    }
-
-    // Paragraphs
-    & > p
-    {
-        margin: 1.5em 0;
-    }
-
-    // Lists
-    // Reset number list aligment
-    ul 
-    {
-        margin-inline-start: 20px;
-        
-        li
+        .article-content
         {
-            display: flexbox;
+            // Compute correct width
+            width: calc(((100vw * 85 / 100 - 40px) * 70 / 100));
+        
+            @media screen and (max-width: 1220px)
+            {
+                width: calc(100vw - 40px);
+            }
             
-            .highlight
-            {
-                justify-self: start;
-                margin-top: 20px;
-                width: 100% !important;
-                margin: 10px 0px !important;
-            }
-
-            p
-            {
-                padding: 0px;
-            }
-        }
-    }
-    
-    // Reset number list aligment
-    ol
-    {
-        margin-inline-start: 27.5px;
+            // Add space to bottom of the article
+            // margin-bottom: 300px;
         
-        li
-        {
-            display: flexbox;
+            // Article text size
+            font-size: var(--font-size-sm);
+            color: var(--text-normal);
+        
+            // Hr style
+            hr
+            {
+                margin: 25px 0px;
+                border: 1px solid var(--text-normal);
+                opacity: .5;
+            }
+        
+            // Headings
+            h1
+            {
+                font-size: var(--font-size-xlg);
+            }
+        
+            h2
+            {
+                font-size: var(--font-size-lg);
+            }
+        
+            h3
+            {
+                font-size: var(--font-size-m);
+            }
+        
+            h4
+            {
+                font-size: var(--font-size-sm);
+            }
+        
+            h5
+            {
+                font-size: var(--font-size-sm);
+            }
+        
+            h6
+            {
+                font-size: var(--font-size-sm);
+            }
+        
+            h1, h2, h3, h4, h5, h6
+            {
+                padding: 10px 0px 10px 0px;
+            }
+        
+            h1:hover .anchor,
+            h2:hover .anchor,
+            h3:hover .anchor,
+            h4:hover .anchor,
+            h5:hover .anchor,
+            h6:hover .anchor 
+            {
+                display: inline-flex;
+                color: var(--text-normal);
+                margin-inline-start: 8px;
+                font-weight: 500;
+                user-select: none;
+                font-size: .75em;
+            }
+        
+            // Paragraphs
+            & > p
+            {
+                margin: 1.5em 0;
+            }
+        
+            // Lists
+            // Reset number list aligment
+            ul 
+            {
+                margin-inline-start: 20px;
+                
+                li
+                {
+                    display: flexbox;
+                    
+                    .highlight
+                    {
+                        justify-self: start;
+                        margin-top: 20px;
+                        width: 100% !important;
+                        margin: 10px 0px !important;
+                    }
+        
+                    p
+                    {
+                        padding: 0px;
+                    }
+                }
+            }
             
-            .highlight
+            // Reset number list aligment
+            ol
             {
-                justify-self: start;
-                margin-top: 20px;
-                width: 100% !important;
-                margin: 0px 0px !important;
+                margin-inline-start: 27.5px;
+                
+                li
+                {
+                    display: flexbox;
+                    
+                    .highlight
+                    {
+                        justify-self: start;
+                        margin-top: 20px;
+                        width: 100% !important;
+                        margin: 0px 0px !important;
+                    }
+        
+                    p
+                    {
+                        padding: 0px;
+                    }
+                }
             }
-
-            p
+        
+            // Code blocks
+            pre 
             {
-                padding: 0px;
+                overflow-x: auto;
+                display: block;
+                background-color: var(--pre-background-color);
+                color: var(--pre-text-color);
+                font-family: var(--code-font-family);
+                line-height: 1.428571429;
+                word-break: break-all;
+                padding: var(--card-padding);
+        
+                // Keep codeblocks LTR
+                [dir="rtl"] & 
+                {
+                    direction: ltr;
+                }
+                
+                code 
+                {
+                    color: unset;
+                    border: none;
+                    background: none;
+                    padding: 0;
+                    font-family: "Cascadia" !important;
+                    font-size: var(--font-size-xsm);
+                    font-weight: bold;
+                }
+        
+                &::-webkit-scrollbar 
+                {
+                    display: none;
+                }
             }
-        }
-    }
-
-    // Code blocks
-    pre 
-    {
-        overflow-x: auto;
-        display: block;
-        background-color: var(--pre-background-color);
-        color: var(--pre-text-color);
-        font-family: var(--code-font-family);
-        line-height: 1.428571429;
-        word-break: break-all;
-        padding: var(--card-padding);
-
-        // Keep codeblocks LTR
-        [dir="rtl"] & 
-        {
-            direction: ltr;
-        }
         
-        code 
-        {
-            color: unset;
-            border: none;
-            background: none;
-            padding: 0;
-            font-family: "Cascadia" !important;
-            font-size: var(--font-size-xsm);
-            font-weight: bold;
-        }
-
-        &::-webkit-scrollbar 
-        {
-            display: none;
-        }
-    }
-
-    .highlight 
-    {
-        position: relative;
-        padding: 15px;
-        margin: 10px 0px;
-        border-radius: 10px;
-        background-color: var(--background-code-block);
-        color: var(--text-syntax-highlight-color);
-        
-        &:hover 
-        {
-            .copyCodeButton 
+            .highlight 
             {
-                // opacity: 1;
-            }
-        }
-
-        // Keep codeblocks LTR
-        [dir="rtl"] & 
-        {
-            direction: ltr;
-        }
+                position: relative;
+                padding: 15px;
+                margin: 10px 0px;
+                border-radius: 10px;
+                background-color: var(--background-code-block);
+                color: var(--text-syntax-highlight-color);
+                
+                &:hover 
+                {
+                    .copyCodeButton 
+                    {
+                        // opacity: 1;
+                    }
+                }
         
-        pre 
-        {
-            margin: initial;
-            padding: 0;
-            margin: 0;
-            width: auto;
-        }
-    }
-
-    .katex-display
-    {
-        display: block;
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        &::-webkit-scrollbar 
-        {
-            display: none;
+                // Keep codeblocks LTR
+                [dir="rtl"] & 
+                {
+                    direction: ltr;
+                }
+                
+                pre 
+                {
+                    margin: initial;
+                    padding: 0;
+                    margin: 0;
+                    width: auto;
+                }
+            }
+        
+            .katex-display
+            {
+                display: block;
+                overflow-x: auto;
+                overflow-y: hidden;
+        
+                &::-webkit-scrollbar 
+                {
+                    display: none;
+                }
+            }
         }
     }
 }

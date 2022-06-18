@@ -1,23 +1,29 @@
 {{/*  Template for single pages. Used by article pages for example.  */}}
 {{ define "main" }}
     <main id="main">
-        <div class="main-inner-wrapper  max-width-wrapper single">
-            <div class="article-header">
-                {{ partial "helper/articleDateInfo.html" . }}
-                {{/*  https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/  */}}
-                {{ range (where .Data.Pages "Section" "posts").ByDate.Reverse }}
-                    {{ .Date.Format  "Jan 02, 2006" }} » <a href="{{ .RelPermalink }}">{{ .Title }}</a><br/>
-                {{ end }}
+        <div class="main-inner-wrapper max-width-wrapper single">
+            <article class="post-single">
+                <div class="article-header">
+                    {{ partial "helper/articleDateInfo.html" . }}
+                    {{/*  https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/  */}}
+                    {{ range (where .Data.Pages "Section" "posts").ByDate.Reverse }}
+                        {{ .Date.Format  "Jan 02, 2006" }} » <a href="{{ .RelPermalink }}">{{ .Title }}</a><br/>
+                    {{ end }}
+                </div>
+                <section class="article-content">
+                    <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
+                    {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
+                    {{ if .Content }}
+                        <div class="post-content toc-content-selector">
+                            {{ partial "helper/anchoredHeading.html" .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
+                        </div>
+                    {{ end }}
+                </section>
+            </article>
+            <div>
+                <aside>
+                </aside>
             </div>
-            <section class="article-content">
-                <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
-                {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
-                {{ if .Content }}
-                    <div class="post-content toc-content-selector">
-                        {{ partial "helper/anchoredHeading.html" .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
-                    </div>
-                {{ end }}
-            </section>            
         </div>
     </main>
 {{ end }}
