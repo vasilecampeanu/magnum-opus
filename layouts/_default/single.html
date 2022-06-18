@@ -49,6 +49,16 @@
                         </div>
                     {{ end }}
                 </section>
+                <div class="article-footer">
+                    {{ if .Params.Categories }}
+                        <div class="article-categories">
+                            {{ range (.GetTerms "categories") }}
+                                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                            {{ end }}
+                        </div>
+                        {{ partial "components/share.html" . }}
+                    {{ end }}
+                </div>
             </article>
             <div>
                 <aside>
