@@ -11,14 +11,12 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-```md
 # H1 Heading
 ## H2 Heading
 ### H3 Heading
 #### H4 Heading
 ##### H5 Heading
 ###### H6 Heading
-```
 
 # Paragraphs
 
@@ -95,3 +93,17 @@ Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat str
 **Danger callout**  
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa.
 {{< /callout >}}
+
+# Katex
+
+{{< katex display >}}
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi 
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+{{< /katex >}}
+
+Here is some inline example: {{< katex >}}f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi{{< /katex >}}, rendered in the same line.
+
+Expresion
+
+$$\int_{a}^{b} x^2 dx$$

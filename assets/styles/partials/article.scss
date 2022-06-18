@@ -195,4 +195,16 @@
             width: auto;
         }
     }
+
+    .katex-display
+    {
+        display: block;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar 
+        {
+            display: none;
+        }
+    }
 }

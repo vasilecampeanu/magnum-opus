@@ -120,6 +120,13 @@
     },
     "markup": 
     {
+        "goldmark": 
+        {
+            "renderer": 
+            {
+                "unsafe": true
+            }
+        },
         "highlight": 
         {
             "anchorLineNos": false,
