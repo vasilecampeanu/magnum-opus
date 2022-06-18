@@ -36,7 +36,7 @@ $(document).ready(function () {
     
     if (current != "/") {
         // console.log("Not on home page!");
-        // document.getElementById("desktop-navbar").style.backgroundColor = "var(--background-primary)";
+        document.getElementById("desktop-navbar").style.backgroundColor = "var(--background-primary)";
     }
 
     // Play animation only when on main page
@@ -167,6 +167,7 @@ burger.addEventListener('click', function(e) {
     this.classList.toggle('is-open');
     nav.classList.toggle('is-open');
     body.classList.toggle('hide-overflow');
+    var navbar_color = document.getElementById('desktop-navbar').classList.toggle('navbarBackgroundColor');
 });
 
 // Navigation bar hide on scroll down, show on scroll up

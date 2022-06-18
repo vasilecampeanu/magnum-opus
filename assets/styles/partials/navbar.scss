@@ -386,6 +386,11 @@ header
                 }
             }
         }
+
+        &.navbarBackgroundColor
+        {
+            background-color: var(--background-secundary);
+        }
     }
 
     .navbar.mobile

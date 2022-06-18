@@ -15,8 +15,11 @@
         display: grid;
         gap: 2rem;
 
+        grid-template-rows: auto 1fr auto;
+
         .article-header
         {
+            align-self: start;
             margin-top: 10px;
             display: grid;
             // margin-bottom: 30px;
@@ -24,7 +27,20 @@
             border-radius: 10px;
             // background-color: var(--background-secondary);
             // box-shadow: 1px 1px 3px var(--shadow-color);
-            
+
+            // Compute correct width
+            width: calc(((100vw * 85 / 100 - 40px) * 70 / 100));
+        
+            @media screen and (max-width: 1220px)
+            {
+                width: calc((100vw - 40px) * 70 / 100);
+            }
+
+            @media screen and (max-width: 1024px)
+            {
+                width: calc((100vw - 40px));
+            }
+
             .title
             {
                 font-size: var(--article-title-desktop);
@@ -148,6 +164,8 @@
 
         .article-content
         {
+            align-self: start;
+
             // padding: 15px;
             // margin-bottom: 500px;
 
@@ -169,9 +187,14 @@
         
             @media screen and (max-width: 1220px)
             {
-                width: calc(100vw - 40px);
+                width: calc((100vw - 40px) * 70 / 100);
             }
-            
+
+            @media screen and (max-width: 1024px)
+            {
+                width: calc((100vw - 40px));
+            }
+
             // Add space to bottom of the article
             // margin-bottom: 300px;
         
@@ -376,6 +399,7 @@
 
         .article-footer
         {
+            align-self: start;
             display: grid;
             gap: 10px;
 
