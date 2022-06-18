@@ -1,6 +1,4 @@
-{{/*  Helper partial.  */}}
-{{/*  Used for loading svg icons.  */}}
-
+{{/*  This is used for loading svg icons.  */}}
 {{ $iconFile := resources.GetMatch (printf "images/icons/%s.svg" .) }}
 {{ if $iconFile }}
     {{ $iconFile.Content | safeHTML }}

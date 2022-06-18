@@ -1,10 +1,12 @@
+{{/*  Article date details.  */}}
 <div class="post-info-date">
-    <!-- Created Date -->
+    {{/*  Article creation date.  */}}
     {{ $publish_date := .Date.Format "Jan 2, 2006" }}
     <div class="post-info-creation-date">
         {{ partial "helper/icon" "calendar-plus" }}<p>Created: <time datetime="{{ .Date }}" title="{{ .Date }}">{{ $publish_date }}</time></p>
     </div>
-    <!-- Last Updated Date -->
+
+    {{/*  Article last updated date.  */}}
     {{ if .Lastmod }}
         {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}
         {{ if and (ne $lastmod $publish_date) (gt .Lastmod .Date) }}

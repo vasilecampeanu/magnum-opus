@@ -3,7 +3,7 @@
     {{ partial "helper/blobBackgroundAnimation.html" . }}
 {{ end }}
 
-{{/*  Main content of home page  */}}
+{{/*  Main content of home page.  */}}
 {{ define "main" }}
     <main id="main">
         <div class="main-inner-wrapper max-width-wrapper home">
@@ -37,9 +37,9 @@
                     
                     {{/*  Three.js  */}}
                     {{ $threeJS := resources.Get "js/three.min.js" | resources.Minify | resources.Fingerprint }}
-                    <script defer src="{{ $threeJS.RelPermalink }}" {{ template "integrity" $threeJS }}></script>
+                    <script src="{{ $threeJS.RelPermalink }}" {{ template "integrity" $threeJS }}></script>
 
-                    {{/*  Character Interaction script  */}}
+                    {{/*  Character Interaction script.  */}}
                     {{ $characterInteraction := resources.Get "js/character-interaction.js" | resources.Minify | resources.Fingerprint }}
                     <script defer src="{{ $characterInteraction.RelPermalink }}" {{ template "integrity" $characterInteraction }}></script>
                 </div>

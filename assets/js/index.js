@@ -27,6 +27,30 @@ if (current_url.includes(post_page)) {
             link.classList.add('active')
         }
     }
+
+    // Initializa TOC Bot
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.table-of-contet',
+        
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.toc-content-selector',
+        
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+
+        // Include the HTML markup from the heading node instead of just including the textContent.
+        includeHtml: true,
+
+        // Create unorder lists
+        orderedList: false,
+
+        // How many heading levels should not be collapsed.
+        collapseDepth: 2,
+    });
 }
 
 // This ill only run once the page Document Object Model (DOM) is ready for JavaScript code to execute
@@ -230,27 +254,3 @@ function dropDownFunction()
 {
     document.getElementById("dropdown-language-content").classList.toggle("show");
 }
-
-// Initializa TOC Bot
-tocbot.init({
-    // Where to render the table of contents.
-    tocSelector: '.table-of-contet',
-    
-    // Where to grab the headings to build the table of contents.
-    contentSelector: '.toc-content-selector',
-    
-    // Which headings to grab inside of the contentSelector element.
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    
-    // For headings inside relative or absolute positioned containers within content.
-    hasInnerContainers: true,
-
-    // Include the HTML markup from the heading node instead of just including the textContent.
-    includeHtml: true,
-
-    // Create unorder lists
-    orderedList: false,
-
-    // How many heading levels should not be collapsed.
-    collapseDepth: 2,
-});

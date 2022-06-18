@@ -5,10 +5,13 @@
     {{ partial "head.html" . }}
 </head>
 <body id="body" class="hide-overflow">
+    {{/*  Load helper components.  */}}
     <div class="helper-components">
         {{ partial "helper/loadingAnimation.html"}}
         {{ block "blob-animation" . }}{{ end }}
     </div>
+    
+    {{/*  Site content  */}}
     <div id="site-wrapper" class="site-wrapper">
         {{ partial "header.html" . }}
         {{ block "main" . }}{{ end }}

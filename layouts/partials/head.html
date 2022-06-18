@@ -20,12 +20,7 @@
 {{ end }}
 
 {{/*  Scripts  */}}
-{{/*  Temporary include JS here  */}}
 {{/*  External libraries  */}}
-{{/*  jQuery  */}}
-{{ $jquery := resources.Get "./js/jquery.min.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $jquery.RelPermalink }}" {{ template "integrity" $jquery }}></script>
-
 {{/*  Lottie player  */}}
 {{ $lottiePlayer := resources.Get "./js/lottie-player.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $lottiePlayer.RelPermalink }}" {{ template "integrity" $lottiePlayer }}></script>
+<script src="{{ $lottiePlayer.RelPermalink }}" {{ template "integrity" $lottiePlayer }}></script>

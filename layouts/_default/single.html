@@ -76,4 +76,9 @@
             </div>
         </div>
     </main>
+
+    {{/*  Includes  */}}
+    {{/*  Table of Content Bot  */}}
+    {{ $tobot := resources.Get "js/tocbot.min.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $tobot.RelPermalink }}" {{ template "integrity" $tobot }}></script>
 {{ end }}

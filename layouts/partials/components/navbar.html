@@ -1,11 +1,14 @@
-{{/*  Desktop navigation bar  */}}
+{{/*  Desktop navigation bar.  */}}
 <div id="desktop-navbar" class="navbar desktop">
     <div class="navbar-inner-wrapper max-width-wrapper">
+        {{/*  Page text logo.  */}}
         <div class="logo">
             {{ $logoHome := "/" | relLangURL }}
             <a href="{{ $logoHome }}" class="logo-desktop">Magnum <span>Opus</span></a>
             <a href="{{ $logoHome }}" class="logo-mobile">M<span>O</span></a>
         </div>
+
+        {{/*  Navigation links.  */}}
         <div class="links">
             <ul>
                 {{ $currentPage := . }}
@@ -19,6 +22,7 @@
                 {{ end }}
             </ul>
         </div>
+
         {{/*  Those lets the user to play with the settings of the page.  */}}
         <div class="actions">
             <ul>

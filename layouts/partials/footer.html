@@ -4,7 +4,7 @@
         <div class="left">© 2022, Magnum Opus.</div>
         <div class="right">
             {{/*  List socal media links  */}}
-            <ul>
+            <ul class="socialMedia">
                 {{ range .Site.Params.socialMedia.general }}
                     <li>
                         <a href="{{ .url }}">{{ partial "helper/icon" .icon }}</a>
@@ -15,10 +15,10 @@
     </div>
 </footer>
 
-{{/*  Includes  */}}
-{{/*  Table of Content Bot  */}}
-{{ $tobot := resources.Get "js/tocbot.min.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $tobot.RelPermalink }}" {{ template "integrity" $tobot }}></script>
+{{/*  Scripts  */}}
+{{/*  jQuery  */}}
+{{ $jquery := resources.Get "./js/jquery.min.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $jquery.RelPermalink }}" {{ template "integrity" $jquery }}></script>
 
 {{/*  Main js script  */}}
 {{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
