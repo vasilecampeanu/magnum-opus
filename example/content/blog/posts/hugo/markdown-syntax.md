@@ -1,6 +1,6 @@
 ---
 title: "Markdown Syntax"
-description: "Sample article showcasing basic markdown syntax and formatting for HTML elements."
+description: "This article offers a sample of basic markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme."
 date: 2022-03-18T21:10:00+07:00
 ---
 

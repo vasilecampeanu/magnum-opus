@@ -14,9 +14,14 @@
     {
         .article-header
         {
+            margin-top: 10px;
             display: grid;
             margin-bottom: 25px;
-
+            padding: 15px;
+            border-radius: 10px;
+            background-color: var(--background-secondary);
+            box-shadow: 1px 1px 3px var(--shadow-color);
+            
             .title
             {
                 font-size: 42px;
@@ -33,18 +38,37 @@
             
             .post-info-date
             {
+                // display: inline-flex;
                 display: inline-flex;
-                gap: 5px;
+                gap: 20px;
                 font-size: var(--font-size-sm);
                 font-weight: bold;
                 // color: var(--article-description-color);
                 
+                @media screen and (max-width: 768px)
+                {
+                    display: grid;
+                    gap: 0;
+                }
+
                 svg
                 {
                     stroke-width: 3;
                     width: var(--font-size-sm);
                     height: var(--font-size-sm);
                     align-self: center;
+                }
+
+                .post-info-creation-date
+                {
+                    display: inline-flex;
+                    gap: 5px;
+                }
+
+                .post-info-last-mod
+                {
+                    display: inline-flex;
+                    gap: 5px;
                 }
             }
 
@@ -54,7 +78,6 @@
                 gap: 5px;
                 font-size: var(--font-size-sm);
                 font-weight: bold;
-                margin-top: 10px;
                 // color: var(--article-description-color);
                 
                 svg
@@ -69,6 +92,10 @@
 
         .article-content
         {
+            padding: 15px;
+            margin-bottom: 450px;
+            // background-color: var(--background-secondary);
+
             // Compute correct width
             width: calc(((100vw * 85 / 100 - 40px) * 70 / 100));
         
@@ -277,6 +304,20 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    aside
+    {
+        align-self: start;
+        position: sticky;
+        top: 50px;
+        max-height: 100vh;
+        overflow-y: scroll;
+        
+        &::-webkit-scrollbar 
+        {
+            display: none;
         }
     }
 }

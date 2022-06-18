@@ -16,6 +16,10 @@
 </footer>
 
 {{/*  Includes  */}}
+{{/*  Table of Content Bot  */}}
+{{ $tobot := resources.Get "js/tocbot.min.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $tobot.RelPermalink }}" {{ template "integrity" $tobot }}></script>
+
 {{/*  Main js script  */}}
 {{ $index := resources.Get "js/index.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $index.RelPermalink }}" {{ template "integrity" $index }}></script>
