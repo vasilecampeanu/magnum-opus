@@ -199,7 +199,7 @@
                                     text-transform: uppercase;
                                     display: inline-flex;
 
-                                    .arrow-right
+                                    .arrow-right-indicator
                                     {
                                         margin-left: 5px;
                                         color: var(--text-accent);
@@ -208,14 +208,14 @@
                                         opacity: 0;
                                     }
 
-                                    &:hover .arrow-right
+                                    &:hover .arrow-right-indicator
                                     {
                                         transform: translateX(5px);
                                     }
                                 }
                             }
 
-                            &:hover .article-description .arrow-right
+                            &:hover .article-description .arrow-right-indicator
                             {
                                 opacity: 1;
                             }

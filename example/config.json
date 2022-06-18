@@ -104,7 +104,12 @@
         "article": 
         {
             "readingTime": true,
-            "showBreadCrumbs": true
+            "showBreadCrumbs": true,
+            "dateInfo": true,
+            "translations": true,
+            "share": true,
+            "categories": true,
+            "tags": true
         },
         "socialMedia":
         {

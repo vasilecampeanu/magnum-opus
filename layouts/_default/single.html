@@ -4,32 +4,38 @@
         <div class="main-inner-wrapper max-width-wrapper single">
             <article class="post-single">
                 <div class="article-header">
-                    {{ if .Site.Params.article.readingTime }}
+                    {{ if .Site.Params.article.showBreadCrumbs }}
                         {{ partial "components/breadcrumbs.html" . }}
                     {{ end }}    
                     <div class="title">
                         {{ .Title }}
                     </div>
-                    {{ if .Params.tags }}
-                        <div class="article-tags">
-                            {{ range (.GetTerms "tags") }}
-                                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                            {{ end }}
-                        </div>
+                    {{ if .Site.Params.article.tags }}
+                        {{ if .Params.tags }}
+                            <div class="article-tags">
+                                {{ range (.GetTerms "tags") }}
+                                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                                {{ end }}
+                            </div>
+                        {{ end }}
                     {{ end }}
                     <div class="decription">
                         {{ .Description }}
                     </div>
-                    {{ partial "helper/articleDateInfo.html" . }}
-                    {{ if .IsTranslated }}
-                        <div class="article-translations">
-                            {{ partial "helper/icon" "languages" }}
-                            <div>
-                                {{ range .Translations }}
-                                    Translations: <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
-                                {{ end }}
+                    {{ if .Site.Params.article.dateInfo }}
+                        {{ partial "helper/articleDateInfo.html" . }}
+                    {{ end }}
+                    {{ if .Site.Params.article.translations }}
+                        {{ if .IsTranslated }}
+                            <div class="article-translations">
+                                {{ partial "helper/icon" "languages" }}
+                                <div>
+                                    {{ range .Translations }}
+                                        Translations: <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
+                                    {{ end }}
+                                </div>
                             </div>
-                        </div>
+                        {{ end }}
                     {{ end }}
                     {{ if .Site.Params.article.readingTime }}
                         <div class="reading-time">
@@ -41,7 +47,8 @@
                     {{ end }}
                 </div>
                 <section class="article-content">
-                    <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
+                    {{/*  Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5  */}}
+                    {{/*  This may cause some unexpected errors.  */}}
                     {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
                     {{ if .Content }}
                         <div class="post-content toc-content-selector">
@@ -50,18 +57,22 @@
                     {{ end }}
                 </section>
                 <div class="article-footer">
-                    {{ if .Params.Categories }}
-                        <div class="article-categories">
-                            {{ range (.GetTerms "categories") }}
-                                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                            {{ end }}
-                        </div>
+                    {{ if .Site.Params.article.categories }}
+                        {{ if .Params.Categories }}
+                            <div class="article-categories">
+                                {{ range (.GetTerms "categories") }}
+                                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                                {{ end }}
+                            </div>
+                        {{ end }}
                     {{ end }}
-                    {{ partial "components/share.html" . }}
+                    {{ if .Site.Params.article.share }}
+                        {{ partial "components/share.html" . }}
+                    {{ end }}
                 </div>
             </article>
-            <div>
-                <aside>
+            <div class="sidebar-container">
+                <aside class="article-sidebar">
                     <div class="toc">
                         <div class="widget-icon">
                             {{ partial "helper/icon" "align-start-vertical" }}
