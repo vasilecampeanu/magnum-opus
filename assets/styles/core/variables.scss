@@ -10,13 +10,16 @@
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;
     --text-syntax-highlight-color: #FFFFFF;
-    --article-description-color: #b6bfcb;
+    --article-description-color: #8fa7b6; // 758996
 
     --callout-color-info: #6bf;
     --callout-color-warning: #fd6;
     --callout-color-danger: #f66;
 
     --shadow-color: #000000;
+
+    --tags-background-color: #272D34;
+    --article-info-color: #bcc0c7;
 }
 
 // Light theme variables
@@ -30,13 +33,16 @@
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;
     --text-syntax-highlight-color: #2A2A2A;
-    --article-description-color: #000000;
+    --article-description-color: #62737E;
 
     --callout-color-info: #6bf;
     --callout-color-warning: #fd6;
     --callout-color-danger: #f66;
 
     --shadow-color: #767C82;
+    
+    --tags-background-color: #c9c9c9;
+    --article-info-color: #484e52;
 }
 
 // Transitions
