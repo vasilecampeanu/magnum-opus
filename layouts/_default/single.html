@@ -4,6 +4,9 @@
         <div class="main-inner-wrapper max-width-wrapper single">
             <article class="post-single">
                 <div class="article-header">
+                    {{ if .Site.Params.article.readingTime }}
+                        {{ partial "components/breadcrumbs.html" . }}
+                    {{ end }}    
                     <div class="title">
                         {{ .Title }}
                     </div>

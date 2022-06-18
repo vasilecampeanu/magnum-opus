@@ -4,10 +4,10 @@
     grid-template-columns: 70% 1fr;
     gap: 2rem;
 
-    @media screen and (max-width: 768px)
+    @media screen and (max-width: 1024px)
     {
         gap: 0;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
     }
 
     .post-single
@@ -126,6 +126,7 @@
             h1, h2, h3, h4, h5, h6
             {
                 padding: 10px 0px 10px 0px;
+                font-weight: bold;
             }
         
             h1:hover .anchor,

@@ -1,0 +1,18 @@
+.breadcrumbs 
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-size-xsm);
+    gap: 5px;
+    a
+    {
+        color: var(--text-normal) !important;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+}   
