@@ -99,6 +99,13 @@
     },
     "params":
     {
+        "logo":
+        {
+            "firstName": "Magnum",
+            "firstNameFL": "M",
+            "lastName": "Opus",
+            "lastNameFL": "O"
+        },
         "posts": "blog/posts/",
         "dateFormat": "02 Jan 2006",
         "article": 

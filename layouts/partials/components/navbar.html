@@ -4,8 +4,8 @@
         {{/*  Page text logo.  */}}
         <div class="logo">
             {{ $logoHome := "/" | relLangURL }}
-            <a href="{{ $logoHome }}" class="logo-desktop">Magnum <span>Opus</span></a>
-            <a href="{{ $logoHome }}" class="logo-mobile">M<span>O</span></a>
+            <a href="{{ $logoHome }}" class="logo-desktop">{{ .Site.Params.logo.firstName }} <span>{{ .Site.Params.logo.LastName }}</span></a>
+            <a href="{{ $logoHome }}" class="logo-mobile">{{ .Site.Params.logo.firstNameFL }}<span>{{ .Site.Params.logo.LastNameFL }}</span></a>
         </div>
 
         {{/*  Navigation links.  */}}
