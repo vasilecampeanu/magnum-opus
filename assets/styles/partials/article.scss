@@ -458,5 +458,19 @@
         {
             display: none;
         }
+
+        .reactions
+        {
+            padding-top: 10px;
+            display: grid;
+            applause-button
+            
+            {
+                justify-self: start;
+                div
+                {
+                }
+            }
+        }
     }
 }

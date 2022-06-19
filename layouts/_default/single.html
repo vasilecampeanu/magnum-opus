@@ -1,5 +1,9 @@
 {{/*  Template for single pages. Used by article pages for example.  */}}
 {{ define "main" }}
+    {{/*  Applause button style  */}}
+    <link rel="stylesheet" href="{{ "plugins/applause/applause-button.css" | relURL }}" />
+    
+    {{/*  Single main  */}}
     <main id="main">
         <div class="main-inner-wrapper max-width-wrapper single">
             <article class="post-single">
@@ -83,6 +87,9 @@
                         <div class="table-of-contet">
                         </div>
                     </div>
+                    <div class="reactions">
+                        <applause-button style="width: 48px; height: 48px;" color="var(--text-normal)"/>
+                    </div>
                 </aside>
             </div>
         </div>
@@ -92,4 +99,7 @@
     {{/*  Table of Content Bot  */}}
     {{ $tobot := resources.Get "js/tocbot.min.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $tobot.RelPermalink }}" {{ template "integrity" $tobot }}></script>
+    
+    {{/*  Applause button script  */}}
+    <script defer src="{{ "plugins/applause/applause-button.js" | relURL }}"></script>
 {{ end }}
