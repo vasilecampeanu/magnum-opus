@@ -16,45 +16,50 @@
 {{ with $ShareButtons }}{{ $custom = true }}{{ end }}
 
 <div class="share-buttons">
-    <div class="share-text">
-        SHARE ON
+    <div>
+        <div class="share-text">
+            SHARE ON
+        </div>
+        <div class="media">
+            {{ if (cond ($custom) (in $ShareButtons "twitter") (true)) }}
+                <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on twitter"
+                    href="https://twitter.com/intent/tweet/?text={{ $title }}&amp;url={{ $pageurl }}&amp;hashtags={{ $.Scratch.Get "tags" }}">
+                    {{ partial "helper/icon" "twitter" }}
+                </a>
+            {{ end }}
+            {{ if (cond ($custom) (in $ShareButtons "linkedin") (true)) }}
+                <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on linkedin"
+                    href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $pageurl }}&amp;title={{ $title }}&amp;summary={{ $title }}&amp;source={{ $pageurl }}">
+                    {{ partial "helper/icon" "linkedin" }}
+                </a>
+            {{ end }}
+            {{ if (cond ($custom) (in $ShareButtons "reddit") (true)) }}
+                <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on reddit"
+                    href="https://reddit.com/submit?url={{ $pageurl }}&title={{ $title }}">
+                    {{ partial "helper/icon" "reddit-line" }}
+                </a>
+            {{ end }}
+            {{ if (cond ($custom) (in $ShareButtons "facebook") (true)) }}
+                <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on facebook"
+                    href="https://facebook.com/sharer/sharer.php?u={{ $pageurl }}">
+                    {{ partial "helper/icon" "facebook" }}
+                </a>
+            {{ end }}
+            {{ if (cond ($custom) (in $ShareButtons "whatsapp") (true)) }}
+                <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on whatsapp"
+                    href="https://api.whatsapp.com/send?text={{ $title }}%20-%20{{ $pageurl }}">
+                    {{ partial "helper/icon" "whatsapp-line" }}
+                </a>
+            {{ end }}
+            {{ if (cond ($custom) (in $ShareButtons "telegram") (true)) }}
+                <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on telegram"
+                    href="https://telegram.me/share/url?text={{ $title }}&amp;url={{ $pageurl }}">
+                    {{ partial "helper/icon" "send" }}
+                </a>
+            {{ end }}
+        </div>
     </div>
-    <div class="media">
-        {{ if (cond ($custom) (in $ShareButtons "twitter") (true)) }}
-            <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on twitter"
-                href="https://twitter.com/intent/tweet/?text={{ $title }}&amp;url={{ $pageurl }}&amp;hashtags={{ $.Scratch.Get "tags" }}">
-                {{ partial "helper/icon" "twitter" }}
-            </a>
-        {{ end }}
-        {{ if (cond ($custom) (in $ShareButtons "linkedin") (true)) }}
-            <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on linkedin"
-                href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $pageurl }}&amp;title={{ $title }}&amp;summary={{ $title }}&amp;source={{ $pageurl }}">
-                {{ partial "helper/icon" "linkedin" }}
-            </a>
-        {{ end }}
-        {{ if (cond ($custom) (in $ShareButtons "reddit") (true)) }}
-            <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on reddit"
-                href="https://reddit.com/submit?url={{ $pageurl }}&title={{ $title }}">
-                {{ partial "helper/icon" "reddit-line" }}
-            </a>
-        {{ end }}
-        {{ if (cond ($custom) (in $ShareButtons "facebook") (true)) }}
-            <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on facebook"
-                href="https://facebook.com/sharer/sharer.php?u={{ $pageurl }}">
-                {{ partial "helper/icon" "facebook" }}
-            </a>
-        {{ end }}
-        {{ if (cond ($custom) (in $ShareButtons "whatsapp") (true)) }}
-            <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on whatsapp"
-                href="https://api.whatsapp.com/send?text={{ $title }}%20-%20{{ $pageurl }}">
-                {{ partial "helper/icon" "whatsapp-line" }}
-            </a>
-        {{ end }}
-        {{ if (cond ($custom) (in $ShareButtons "telegram") (true)) }}
-            <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on telegram"
-                href="https://telegram.me/share/url?text={{ $title }}&amp;url={{ $pageurl }}">
-                {{ partial "helper/icon" "send" }}
-            </a>
-        {{ end }}
+    <div class="reactions">
+        <applause-button style="width: 40px; height: 40px;" color="var(--text-normal)" url="{{ .Page.Permalink }}"/>
     </div>
 </div>

@@ -425,22 +425,34 @@
             .share-buttons
             {
                 display: grid;
-                gap: 5px;
+                grid-template-columns: 1fr auto;
 
-                .share-text
+                div
                 {
-                    font-weight: bold;
+                    display: grid;
+                    gap: 5px;
+
+                    .share-text
+                    {
+                        font-weight: bold;
+                    }
+    
+                    .media
+                    {
+                        display: inline-flex;
+                        gap: 10px;
+                        
+                        a
+                        {
+                            color: var(--text-normal);
+                        }
+                    }
                 }
 
-                .media
+                .reactions
                 {
-                    display: inline-flex;
-                    gap: 10px;
-                    
-                    a
-                    {
-                        color: var(--text-normal);
-                    }
+                    display: grid;
+                    align-content: end;
                 }
             }
         }
@@ -457,20 +469,6 @@
         &::-webkit-scrollbar 
         {
             display: none;
-        }
-
-        .reactions
-        {
-            padding-top: 10px;
-            display: grid;
-            applause-button
-            
-            {
-                justify-self: start;
-                div
-                {
-                }
-            }
         }
     }
 }

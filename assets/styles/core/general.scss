@@ -17,6 +17,7 @@ body
 html
 {
     scroll-behavior: smooth;
+    height: auto;
 }
 
 .site-wrapper
@@ -27,8 +28,6 @@ html
     gap: 0rem;
 
     // Height
-    
-    height: 100%;
 
     // Width wrappers
     .main-inner-wrapper
