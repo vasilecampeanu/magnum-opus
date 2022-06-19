@@ -389,7 +389,7 @@ header
 
         &.navbarBackgroundColor
         {
-            background-color: var(--background-secundary);
+            background-color: var(--background-secundary) !important;
         }
     }
 

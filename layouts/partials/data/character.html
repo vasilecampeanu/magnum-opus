@@ -1,0 +1,10 @@
+{{/*  Canvas  */}}
+<canvas id="character-interaction"></canvas>
+
+{{/*  Three.js  */}}
+{{ $threeJS := resources.Get "js/three.min.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $threeJS.RelPermalink }}" {{ template "integrity" $threeJS }}></script>
+
+{{/*  Character Interaction script.  */}}
+{{ $characterInteraction := resources.Get "js/character-interaction.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $characterInteraction.RelPermalink }}" {{ template "integrity" $characterInteraction }}></script>

@@ -2,8 +2,8 @@
 {{ if not (.Page.Scratch.Get "katex") }}
     {{/*  Link katex dependencies  */}}
     <link rel="stylesheet" href="{{ "plugins/katex/katex.min.css" | relURL }}" />
-    <script src="{{ "plugins/katex/katex.min.js" | relURL }}"></script>
-    <script src="{{ "plugins/katex/auto-render.min.js" | relURL }}" onload="renderMathInElement(document.body);"></script>
+    <script defer src="{{ "plugins/katex/katex.min.js" | relURL }}"></script>
+    <script defer src="{{ "plugins/katex/auto-render.min.js" | relURL }}" onload="renderMathInElement(document.body);"></script>
     {{ .Page.Scratch.Set "katex" true }}
 {{ end }}
 

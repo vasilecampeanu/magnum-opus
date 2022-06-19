@@ -1,0 +1,21 @@
+{{ if eq .Site.Language.LanguageName "English" }}
+    <div class="subtitle">
+        <p>Magnum Opus - </p>
+    </div>
+    <div class="title">
+        <h1>Welcome to the demo of this theme.</h1>
+    </div>
+    <div class="info">
+        <p>Magnum Opus is a simple but fast and responsive <a href="https://gohugo.io">hugo theme</a> with useful feature-set that enhances UX. If you like it please give it a star on <a href="https://github.com/vasilecampeanu/magnum-opus">GitHub</a>.</p>
+    </div>
+    {{ else if eq .Site.Language.LanguageName "Romanian" }}
+    <div class="subtitle">
+        <p>Magnum Opus - </p>
+    </div>
+    <div class="title">
+        <h1>Bun venit la demonstratia acestei teme.</h1>
+    </div>
+    <div class="info">
+        <p>Magnum Opus este o <a href="https://gohugo.io">tema hugo</a> simpla si responsiva, cu un set de functii utile care inbunatateste UX-ul. Dacă îți place, da-i o stea pe <a href="https://github.com/vasilecampeanu/magnum-opus">GitHub</a>.</p>
+    </div>
+{{ end }}

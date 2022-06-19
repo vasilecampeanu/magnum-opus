@@ -12,7 +12,7 @@ $callout-colors:
 {
     padding: 15px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin: 10px 0px;
 
     @each $name, $color in $callout-colors 
     {
