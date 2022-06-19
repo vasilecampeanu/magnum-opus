@@ -57,9 +57,9 @@ if (current_url.includes(post_page)) {
 $(document).ready(function () {
     // Enable blob background animation
     var current = window.location.pathname;
-    
-    if (current != "/") {
-        // console.log("Not on home page!");
+
+    if ((current != "/") && (current != "/ro/")) {
+        console.log("Not on home page!");
         document.getElementById("desktop-navbar").style.backgroundColor = "var(--background-primary)";
     }
 
