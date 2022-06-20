@@ -49,7 +49,7 @@ if (current_url.includes(post_page)) {
         orderedList: false,
 
         // How many heading levels should not be collapsed.
-        collapseDepth: 2,
+        collapseDepth: -1,
     });
 }
 

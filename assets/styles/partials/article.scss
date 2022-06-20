@@ -147,12 +147,12 @@
                 gap: 5px;
                 font-size: var(--font-size-sm);
                 font-weight: bold;
-                // color: var(--text-normal);
+                
                 color: var(--article-info-color);
 
                 a
                 {
-                    color: var(--article-info-color);
+                    color: var(--text-normal);
                     text-decoration: none;
                     
                     &:hover
