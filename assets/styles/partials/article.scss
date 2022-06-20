@@ -29,8 +29,16 @@
             // box-shadow: 1px 1px 3px var(--shadow-color);
 
             // Compute correct width
-            width: calc(((100vw * 85 / 100 - 40px) * 70 / 100));
-        
+            @media screen and (min-width: 1823px)
+            {
+                width: calc((100vw * (85 / 100) - 40px - (100vw * (85 / 100) - 1536px)) * 70 / 100);
+            }
+
+            @media screen and (max-width: 1536px)
+            {
+                width: calc(((100vw * 85 / 100 - 1rem - 40px) * 70 / 100));
+            }
+
             @media screen and (max-width: 1220px)
             {
                 width: calc((100vw - 40px) * 70 / 100);
@@ -183,8 +191,16 @@
             // background-color: var(--background-secondary);
 
             // Compute correct width
-            width: calc(((100vw * 85 / 100 - 40px) * 70 / 100));
-        
+            @media screen and (min-width: 1823px)
+            {
+                width: calc((100vw * (85 / 100) - 40px - (100vw * (85 / 100) - 1536px)) * 70 / 100);
+            }
+
+            @media screen and (max-width: 1536px)
+            {
+                width: calc(((100vw * 85 / 100 - 1rem - 40px) * 70 / 100));
+            }
+
             @media screen and (max-width: 1220px)
             {
                 width: calc((100vw - 40px) * 70 / 100);
