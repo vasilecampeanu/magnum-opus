@@ -1,13 +1,11 @@
-body
+.error404
 {
-    &.error-404
+    display: grid;
+    height: calc(100vh - 80px - 64px);
+
+    lottie-player
     {
-        display: grid;
-        
-        lottie-player
-        {
-            justify-self: center;
-            align-self: center;
-        }
+        justify-self: center;
+        align-self: center;
     }
 }
