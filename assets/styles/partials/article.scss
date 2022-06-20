@@ -46,7 +46,7 @@
 
             @media screen and (max-width: 1024px)
             {
-                width: calc((100vw - 40px));
+                width: calc((100vw - 40px - 1rem));
             }
 
             .title
@@ -208,7 +208,7 @@
 
             @media screen and (max-width: 1024px)
             {
-                width: calc((100vw - 40px));
+                width: calc((100vw - 40px - 1rem));
             }
 
             // Add space to bottom of the article
