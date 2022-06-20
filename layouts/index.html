@@ -22,10 +22,8 @@
                         <div class="title">RECENTLY PUBLISHED</div>
                     </div>
                     <div class="article-list">
-                        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.posts }}
-                        {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-                        {{ $filtered := ($pages | intersect $notHidden) }}
-                        {{ range $index, $element := $filtered }}
+                        {{ $pages := (where .Site.RegularPages "Type" "in" .Site.Params.posts).ByDate.Reverse }}
+                        {{ range $index, $element := $pages }}
                             {{ partial "article/compact.html" . }}
                         {{ end }}
                     </div>

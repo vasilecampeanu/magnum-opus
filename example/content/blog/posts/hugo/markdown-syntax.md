@@ -3,7 +3,7 @@ title: "Markdown Syntax"
 description: "This article offers a sample of basic markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme."
 tags: [ "markdown", "html" ]
 categories: [ "hugo" ]
-date: 2022-03-18T21:10:00+07:00
+date: 2022-06-19T11:27:59+03:00
 ---
 
 # So, what is markdown?
